@@ -27,14 +27,6 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-body {
-	line-height: 1;
-    letter-spacing: -0.04em;
-    font: 400 16px/1.5 var(--font);
-	color: var(--black);
-
-    // min-width: 1300px;
-}
 ol, ul {
 	list-style: none;
 }
@@ -54,4 +46,51 @@ a,
 button {
     cursor: pointer;
     outline: unset;
+}
+
+$font: 'Pretendard';
+$font-black: #111111;
+$font-grey: #767676;
+$font-white: #ffffff;
+$line-regular: #E5E5EC;
+
+$bg-red: #DC0000;
+
+$brand: #33BA8A;
+
+// note: 인풋
+.ipt{
+    display: inline-block;
+    & + &{
+        margin-top: 24px;
+    }
+    span{
+        font: 400 14px/20px $font;
+        color: $font-black;
+        letter-spacing: -0.025em;
+        &.body-error{
+            color: $bg-red;
+            font-size: 13px;
+            line-height: 18px;
+            margin-top: 8px;
+        }
+    }
+    input,
+    select{
+        display: inline-block;
+        margin-top: 8px;
+        font: 400 16px/24px $font;
+        color: $font-black;
+        letter-spacing: -0.025em;
+        padding: 14px 16px;
+        border: 1px solid $line-regular;
+        border-radius: 6px;
+        &::placeholder{
+            color: $font-grey;
+        }
+        &:focus{
+            outline: unset;
+            background-color: rgba($brand, 0.2);
+        }
+    }
 }
