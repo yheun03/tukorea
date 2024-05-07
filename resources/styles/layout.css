@@ -88,13 +88,6 @@ footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
-body {
-  line-height: 1;
-  letter-spacing: -0.04em;
-  font: 400 16px/1.5 var(--font);
-  color: var(--black);
-}
-
 ol, ul {
   list-style: none;
 }
@@ -119,3 +112,88 @@ button {
   cursor: pointer;
   outline: unset;
 }
+
+.ipt {
+  display: inline-block;
+}
+.ipt + .ipt {
+  margin-top: 24px;
+}
+.ipt span {
+  font: 400 14px/20px "Pretendard";
+  color: #111111;
+  letter-spacing: -0.025em;
+}
+.ipt span.body-error {
+  color: #DC0000;
+  font-size: 13px;
+  line-height: 18px;
+  margin-top: 8px;
+}
+.ipt input,
+.ipt select {
+  display: inline-block;
+  margin-top: 8px;
+  font: 400 16px/24px "Pretendard";
+  color: #111111;
+  letter-spacing: -0.025em;
+  padding: 14px 16px;
+  border: 1px solid #E5E5EC;
+  border-radius: 6px;
+}
+.ipt input::placeholder,
+.ipt select::placeholder {
+  color: #767676;
+}
+.ipt input:focus,
+.ipt select:focus {
+  outline: unset;
+  background-color: rgba(51, 186, 138, 0.2);
+}
+
+.wrap {
+  max-width: 375px;
+  width: 100%;
+  margin: auto;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  padding-inline: 20px;
+  height: 56px;
+  background-color: #ffffff;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.0588235294);
+}
+header img {
+  display: block;
+}
+header h1 img {
+  height: 38px;
+}
+header ul {
+  margin-left: auto;
+  display: flex;
+}
+header ul li {
+  display: inline-block;
+  margin-left: 16px;
+}
+header ul img {
+  height: 28px;
+}
+
+section {
+  height: calc(100vh - 108px);
+}
+
+footer {
+  position: sticky;
+  height: 52px;
+  background-color: #DC0000;
+  bottom: 0;
+}
+
+/*# sourceMappingURL=layout.css.map */

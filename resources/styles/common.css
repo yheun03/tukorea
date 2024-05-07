@@ -88,13 +88,6 @@ footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
-body {
-  line-height: 1;
-  letter-spacing: -0.04em;
-  font: 400 16px/1.5 var(--font);
-  color: var(--black);
-}
-
 ol, ul {
   list-style: none;
 }
@@ -119,3 +112,43 @@ button {
   cursor: pointer;
   outline: unset;
 }
+
+.ipt {
+  display: inline-block;
+}
+.ipt + .ipt {
+  margin-top: 24px;
+}
+.ipt span {
+  font: 400 14px/20px "Pretendard";
+  color: #111111;
+  letter-spacing: -0.025em;
+}
+.ipt span.body-error {
+  color: #DC0000;
+  font-size: 13px;
+  line-height: 18px;
+  margin-top: 8px;
+}
+.ipt input,
+.ipt select {
+  display: inline-block;
+  margin-top: 8px;
+  font: 400 16px/24px "Pretendard";
+  color: #111111;
+  letter-spacing: -0.025em;
+  padding: 14px 16px;
+  border: 1px solid #E5E5EC;
+  border-radius: 6px;
+}
+.ipt input::placeholder,
+.ipt select::placeholder {
+  color: #767676;
+}
+.ipt input:focus,
+.ipt select:focus {
+  outline: unset;
+  background-color: rgba(51, 186, 138, 0.2);
+}
+
+/*# sourceMappingURL=common.css.map */
