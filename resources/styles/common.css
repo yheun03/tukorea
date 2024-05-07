@@ -107,6 +107,10 @@ table {
   border-spacing: 0;
 }
 
+img {
+  display: block;
+}
+
 a,
 button {
   cursor: pointer;
@@ -125,9 +129,8 @@ button {
   letter-spacing: -0.025em;
 }
 .ipt span.body-error {
+  font: 400 13px/18px "Pretendard";
   color: #DC0000;
-  font-size: 13px;
-  line-height: 18px;
   margin-top: 8px;
 }
 .ipt input,
@@ -149,6 +152,85 @@ button {
 .ipt select:focus {
   outline: unset;
   background-color: rgba(51, 186, 138, 0.2);
+}
+
+.list-useByDate h2 {
+  font: 600 18px/26px "Pretendard";
+  letter-spacing: -0.025em;
+  color: #111111;
+}
+.list-useByDate ul {
+  width: 100%;
+  overflow: auto;
+  white-space: nowrap;
+  margin-top: 16px;
+}
+.list-useByDate li {
+  width: 70px;
+  display: inline-block;
+  padding: 8px 11px;
+}
+.list-useByDate li + li {
+  margin-left: 4px;
+}
+.list-useByDate li a {
+  position: relative;
+}
+.list-useByDate li a > span {
+  position: absolute;
+  top: -4px;
+  right: -7px;
+  background-color: #DC0000;
+  border-radius: 4px;
+  padding-inline: 4px;
+  font: 400 11px/16px "Pretendard";
+  color: #ffffff;
+}
+.list-useByDate img {
+  width: 48px;
+  aspect-ratio: 1;
+  object-fit: contain;
+}
+.list-useByDate p {
+  font: 400 12px/18px "Pretendard";
+  color: #505050;
+  letter-spacing: -0.025em;
+  text-align: center;
+  margin-top: 4px;
+}
+.list-recipe ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 32px 16px;
+}
+.list-recipe a span {
+  font: 600 12px/18px "Pretendard";
+  color: #111111;
+  letter-spacing: -0.025em;
+}
+.list-recipe a p {
+  font: 400 13px/18px "Pretendard";
+  color: #505050;
+  letter-spacing: -0.025em;
+  margin-top: 2px;
+}
+.list-recipe a div {
+  margin-top: 16px;
+}
+.list-recipe a b {
+  position: relative;
+}
+.list-recipe a b span {
+  display: block;
+  width: 40px;
+  height: 30px;
+  background-color: blue;
+  position: absolute;
+  top: 10px;
+}
+.list-recipe img {
+  width: 100%;
+  object-fit: center;
 }
 
 /*# sourceMappingURL=common.css.map */

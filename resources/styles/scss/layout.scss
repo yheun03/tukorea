@@ -21,9 +21,6 @@ header{
     height: $height-header;
     background-color: $bg-white;
     box-shadow: $shadow-header;
-    img{
-        display: block;
-    }
     h1{
         img{
             height: 38px;
@@ -42,7 +39,8 @@ header{
     }
 }
 section{
-    height: calc(100vh - ($height-header + $height-footer));
+    min-height: calc(100vh - ($height-header + $height-footer));
+    padding-block: 16px 10px;
 }
 footer{
     position: sticky;
