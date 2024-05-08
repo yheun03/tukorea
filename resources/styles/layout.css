@@ -154,29 +154,70 @@ button {
   background-color: rgba(51, 186, 138, 0.2);
 }
 
-.list-useByDate h2 {
+.btn-more {
+  font: 400 12px/18px "Pretendard";
+  color: #111111;
+  letter-spacing: -0.025em;
+  padding-right: 12px;
+  background: url(/resources/images/icons/ic-arrow-right.svg) right center/12px no-repeat;
+}
+
+[class^=list] > h2 {
   font: 600 18px/26px "Pretendard";
   letter-spacing: -0.025em;
   color: #111111;
+  display: flex;
+  align-items: center;
 }
-.list-useByDate ul {
+[class^=list] > h2 a {
+  margin-left: auto;
+}
+[class^=list] > p {
+  font: 400 13px/18px "Pretendard";
+  letter-spacing: -0.025em;
+  color: #767676;
+}
+[class^=list] > ul {
+  margin-top: 16px;
+}
+
+.review-star ul {
+  display: inline-flex;
+}
+.review-star li {
+  display: inline-block;
+  width: 12px;
+  aspect-ratio: 1;
+  background: url(/resources/images/icons/ic-star.svg) 0/24px no-repeat;
+}
+.review-star li.active {
+  background-position: -12px;
+}
+.review-star span {
+  font: 400 13px/18px "Pretendard";
+  letter-spacing: 0.025em;
+  color: #111111;
+  vertical-align: bottom;
+}
+
+.list-useByDate > ul {
   width: 100%;
   overflow: auto;
   white-space: nowrap;
   margin-top: 16px;
 }
-.list-useByDate li {
+.list-useByDate > ul li {
   width: 70px;
   display: inline-block;
   padding: 8px 11px;
 }
-.list-useByDate li + li {
+.list-useByDate > ul li + li {
   margin-left: 4px;
 }
-.list-useByDate li a {
+.list-useByDate > ul li a {
   position: relative;
 }
-.list-useByDate li a > span {
+.list-useByDate > ul li a > span {
   position: absolute;
   top: -4px;
   right: -7px;
@@ -198,40 +239,52 @@ button {
   text-align: center;
   margin-top: 4px;
 }
-.list-recipe ul {
+.list-recipe > ul {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 32px 16px;
 }
-.list-recipe a span {
+.list-recipe a .r-chef {
   font: 600 12px/18px "Pretendard";
   color: #111111;
   letter-spacing: -0.025em;
 }
-.list-recipe a p {
+.list-recipe a .r-title {
   font: 400 13px/18px "Pretendard";
   color: #505050;
   letter-spacing: -0.025em;
   margin-top: 2px;
 }
-.list-recipe a div {
+.list-recipe a > div {
   margin-top: 16px;
-}
-.list-recipe a b {
-  position: relative;
-}
-.list-recipe a b span {
-  display: block;
-  width: 40px;
-  height: 30px;
-  background-color: blue;
-  position: absolute;
-  top: 10px;
 }
 .list-recipe img {
   width: 100%;
   object-fit: center;
   border-radius: 8px;
+}
+.list-tag ul {
+  margin-top: unset;
+}
+.list-tag li {
+  font: 400 11px/16px "Pretendard";
+  letter-spacing: -0.025em;
+  color: #111111;
+  padding: 2px 4px;
+  background-color: #F7F7FB;
+  display: inline-block;
+}
+
+.banner {
+  margin-block: unset;
+  padding-inline: unset;
+}
+.banner img {
+  width: 100%;
+  border-radius: 8px;
+}
+.banner li {
+  padding-inline: 4px;
 }
 
 .wrap {
@@ -249,6 +302,7 @@ header {
   height: 56px;
   background-color: #ffffff;
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.0588235294);
+  z-index: 100;
 }
 header h1 img {
   height: 38px;
@@ -276,6 +330,7 @@ footer {
   bottom: 0;
   background-color: #ffffff;
   box-shadow: 0 -10px 5px 0 rgba(0, 0, 0, 0.0588235294);
+  z-index: 100;
 }
 footer ul {
   display: flex;

@@ -109,39 +109,84 @@ $brand: #33BA8A;
     }
 }
 
+// NOTE: 버튼
+.btn{
+    &-more{
+        font: $mb-c2-rg;
+        color: $font-02black;
+        letter-spacing: -0.025em;
+        padding-right: 12px;
+        background: url(/resources/images/icons/ic-arrow-right.svg) right center/12px no-repeat;
+    }
+}
 // NOTE: LIST
+[class^=list]{
+    & > h2{
+        font: $mb-t5-sb;
+        letter-spacing: -0.025em;
+        color: $font-02black;
+        display: flex;
+        align-items: center;
+        a{
+            margin-left: auto;
+        }
+    }
+    & > p{
+        font: $mb-c1-rg;
+        letter-spacing: -0.025em;
+        color: $font-04grey;
+    }
+    & > ul{
+        margin-top: 16px;
+    }
+}
+.review-star{
+    ul{
+        display: inline-flex;
+    }
+    li{
+        display: inline-block;
+        width: 12px;
+        aspect-ratio: 1;
+        background: url(/resources/images/icons/ic-star.svg) 0/24px no-repeat;
+        &.active{
+            background-position: -12px;
+        }
+    }
+    span{
+        font: $mb-c1-rg;
+        letter-spacing: 0.025em;
+        color: $font-02black;
+        vertical-align: bottom;
+    }
+}
 .list{
     // 소비기한 임박 식자재
     &-useByDate{
-        h2{
-            font: $mb-t5-sb;
-            letter-spacing: -0.025em;
-            color: $font-02black;
-        }
-        ul{
+        & > ul{
             width: 100%;
             overflow: auto;
             white-space: nowrap;
             margin-top: 16px;
-        }
-        li{
-            width: 70px;
-            display: inline-block;
-            padding: 8px 11px;
-            & + li{
-                margin-left: 4px;
-            }
-            a{
-                position: relative;
-                & > span{
-                    position: absolute;
-                    top: -4px;
-                    right: -7px;
-                    background-color: $bg-red;
-                    border-radius: 4px;
-                    padding-inline: 4px;
-                    font: $mb-c3-rg;
-                    color: $font-01white;
+            li{
+                width: 70px;
+                display: inline-block;
+                padding: 8px 11px;
+                & + li{
+                    margin-left: 4px;
+                }
+                a{
+                    position: relative;
+                    & > span{
+                        position: absolute;
+                        top: -4px;
+                        right: -7px;
+                        background-color: $bg-red;
+                        border-radius: 4px;
+                        padding-inline: 4px;
+                        font: $mb-c3-rg;
+                        color: $font-01white;
+                    }
                 }
             }
         }
@@ -161,36 +206,27 @@ $brand: #33BA8A;
 
     // 레시피
     &-recipe{
-        ul{
+        & > ul{
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             grid-gap: 32px 16px;
         }
         a{
-            span{
-                font: $mb-c2-sb;
-                color: $font-02black;
-                letter-spacing: -0.025em;
-            }
-            p{
-                font: $mb-c1-rg;
-                color: $font-03grey;
-                letter-spacing: -0.025em;
-                margin-top: 2px;
-            }
-            div{
-                margin-top: 16px;
-            }
-            b{
-                position: relative;
-                span{
-                    display: block;
-                    width: 40px;
-                    height: 30px;
-                    background-color: blue;
-                    position: absolute;
-                    top: 10px;
+            .r{
+                &-chef{
+                    font: $mb-c2-sb;
+                    color: $font-02black;
+                    letter-spacing: -0.025em;
                 }
+                &-title{
+                    font: $mb-c1-rg;
+                    color: $font-03grey;
+                    letter-spacing: -0.025em;
+                    margin-top: 2px;
+                }
+            }
+            & > div{
+                margin-top: 16px;
             }
         }
         img{
@@ -198,5 +234,32 @@ $brand: #33BA8A;
             object-fit: center;
             border-radius: 8px;
         }
+    }
+
+    // 해시태그
+    &-tag{
+        ul{
+            margin-top: unset;
+        }
+        li{
+            font: $mb-c3-rg;
+            letter-spacing: -0.025em;
+            color: $font-02black;
+            padding: 2px 4px;
+            background-color: #F7F7FB;
+            display: inline-block;
+        }
+    }
+}
+
+.banner{
+    margin-block: unset;
+    padding-inline: unset;
+    img{
+        width: 100%;
+        border-radius: 8px;
+    }
+    li{
+        padding-inline: 4px;
     }
 }

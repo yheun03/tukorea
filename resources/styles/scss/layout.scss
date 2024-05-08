@@ -22,6 +22,7 @@ header{
     height: $height-header;
     background-color: $bg-white;
     box-shadow: $shadow-header;
+    z-index: 100;
     h1{
         img{
             height: 38px;
@@ -49,6 +50,7 @@ footer{
     bottom: 0;
     background-color: $bg-white;
     box-shadow: $shadow-footer;
+    z-index: 100;
     ul{
         display: flex;
         li{
@@ -70,65 +72,3 @@ footer{
         }
     }
 }
-
-// body {
-//     display: flex;
-//     flex-direction: column;
-//     min-height: 100vh;
-//     align-items: center;
-//     justify-content: center;
-//     height: 100%;
-//     overflow: hidden;
-//     width: 100%;
-//     margin: 0 auto;
-// }
-
-// .body{
-//     width: 420px;
-//     height: 100%;
-//     min-height: 100vh;
-//     overflow-x: hidden;
-//     overflow-y: auto;  /* Enable vertical scrolling */
-//     max-height: calc(100vh - 60px);
-//     scrollbar-width: none;
-// }
-
-// .body::-webkit-scrollbar {
-//     width: 0;
-//     height: 8px; /* 가로 스크롤바 높이 설정 */
-//     background-color: transparent; /* 배경 색상 설정 */
-// }
-
-// .body::-webkit-scrollbar-thumb {
-//     background-color: transparent; /* 스크롤바 색상 설정 */
-// }
-
-// .body::-moz-scrollbar {
-//     width: 0;
-//     height: 8px; /* 가로 스크롤바 높이 설정 */
-//     background-color: transparent; /* 배경 색상 설정 */
-// }
-
-// .body::-moz-scrollbar-thumb {
-//     background-color: transparent; /* 스크롤바 색상 설정 */
-// }
-
-// header {
-//     position: sticky;
-//     top: 0;
-// }
-
-// nav {
-//     text-align: center;
-//     align-items: center;
-//     bottom: 0;
-//     left: 0;
-//     width: 420px;
-//     background-color: var(--bgPrimary);
-//     cursor: pointer;
-// }
-// section {
-//     width: 100%;
-//     text-align: center;
-//     justify-content: center;
-// }
