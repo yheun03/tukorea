@@ -156,9 +156,20 @@ button {
 }
 
 .btn {
+  display: block;
   background-color: unset;
   border: unset;
   outline: unset;
+  background-color: #F7F7FB;
+  font: 400 16px/24px "Pretendard";
+  letter-spacing: -0.025em;
+  color: #505050;
+  padding: 14px 16px;
+  border-radius: 6px;
+}
+.btn.primary {
+  background-color: #33BA8A;
+  color: #ffffff;
 }
 .btn.plus {
   border-radius: 8px;
@@ -166,6 +177,10 @@ button {
   aspect-ratio: 1;
   background: #33BA8A url(/resources/images/icons/ic-plus.svg) center/20px no-repeat;
   box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.0784313725);
+}
+.btn.full {
+  width: 100%;
+  text-align: center;
 }
 .btn-more {
   font: 400 12px/18px "Pretendard";
@@ -455,6 +470,31 @@ footer .floating {
   position: absolute;
   bottom: 62px;
   right: 16px;
+}
+
+.addFood img {
+  width: 100%;
+  padding-inline: 16px;
+  margin-block: 96px 24px;
+}
+.addFood p {
+  letter-spacing: -0.025em;
+  color: #111111;
+  text-align: center;
+}
+.addFood p.title {
+  font: 600 18px/26px "Pretendard";
+  margin-block: 24px 16px;
+}
+.addFood p.dscpt {
+  font: 200 14px/20px "Pretendard";
+}
+.addFood .btn-wrap {
+  margin-top: 96px;
+  padding-inline: 40px;
+}
+.addFood .btn-wrap .btn + .btn {
+  margin-top: 8px;
 }
 
 /*# sourceMappingURL=styles.css.map */

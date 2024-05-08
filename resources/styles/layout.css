@@ -156,9 +156,20 @@ button {
 }
 
 .btn {
+  display: block;
   background-color: unset;
   border: unset;
   outline: unset;
+  background-color: #F7F7FB;
+  font: 400 16px/24px "Pretendard";
+  letter-spacing: -0.025em;
+  color: #505050;
+  padding: 14px 16px;
+  border-radius: 6px;
+}
+.btn.primary {
+  background-color: #33BA8A;
+  color: #ffffff;
 }
 .btn.plus {
   border-radius: 8px;
@@ -166,6 +177,10 @@ button {
   aspect-ratio: 1;
   background: #33BA8A url(/resources/images/icons/ic-plus.svg) center/20px no-repeat;
   box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.0784313725);
+}
+.btn.full {
+  width: 100%;
+  text-align: center;
 }
 .btn-more {
   font: 400 12px/18px "Pretendard";

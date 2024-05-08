@@ -64,10 +64,13 @@ $mb-t5-sb: 600 18px/26px $font;
 $mb-t4-rg: 400 16px/24px $font;
 $mb-b2-sb: 600 14px/20px $font;
 $mb-b2-rg: 400 14px/20px $font;
+$mb-b2-lt: 200 14px/20px $font;
 $mb-c1-rg: 400 13px/18px $font;
 $mb-c2-sb: 600 12px/18px $font;
 $mb-c2-rg: 400 12px/18px $font;
 $mb-c3-rg: 400 11px/16px $font;
+
+$btn1-rg: 400 16px/24px $font;
 
 $line-black: #111111;
 $line-regular: #E5E5EC;
@@ -115,15 +118,32 @@ $brand: #33BA8A;
 
 // NOTE: 버튼
 .btn{
+    display: block;
     background-color: unset;
     border: unset;
     outline: unset;
+    background-color: #F7F7FB;
+    font: $btn1-rg;
+    letter-spacing: -0.025em;
+    color: $font-03grey;
+    padding: 14px 16px;
+    border-radius: 6px;
+
+    &.primary{
+        background-color: $brand;
+        color: $font-01white;
+    }
+
     &.plus{
         border-radius: 8px;
         width: 40px;
         aspect-ratio: 1;
         background: $brand url(/resources/images/icons/ic-plus.svg) center/20px no-repeat;
         box-shadow: 0 4px 16px 0 #00000014;
+    }
+    &.full{
+        width: 100%;
+        text-align: center;
     }
     &-more{
         font: $mb-c2-rg;
