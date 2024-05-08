@@ -5,6 +5,7 @@ $width-device: 375px;
 $height-header: 56px;
 $height-footer: 52px;
 $shadow-header: 0 5px 10px 0 #0000000f;
+$shadow-footer: 0 -10px 5px 0 #0000000f;
 
 .wrap{
     max-width: $width-device;
@@ -45,8 +46,29 @@ section{
 footer{
     position: sticky;
     height: $height-footer;
-    background-color: $bg-red;
     bottom: 0;
+    background-color: $bg-white;
+    box-shadow: $shadow-footer;
+    ul{
+        display: flex;
+        li{
+            flex: 1;
+            a{
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                padding-block: 4px;
+            }
+            img{
+                height: 28px;
+            }
+            span{
+                font: $mb-c3-rg;
+                letter-spacing: -0.025em;
+                color: $font-04grey;
+            }
+        }
+    }
 }
 
 // body {

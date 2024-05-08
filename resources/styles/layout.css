@@ -231,6 +231,7 @@ button {
 .list-recipe img {
   width: 100%;
   object-fit: center;
+  border-radius: 8px;
 }
 
 .wrap {
@@ -272,8 +273,29 @@ section {
 footer {
   position: sticky;
   height: 52px;
-  background-color: #DC0000;
   bottom: 0;
+  background-color: #ffffff;
+  box-shadow: 0 -10px 5px 0 rgba(0, 0, 0, 0.0588235294);
+}
+footer ul {
+  display: flex;
+}
+footer ul li {
+  flex: 1;
+}
+footer ul li a {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-block: 4px;
+}
+footer ul li img {
+  height: 28px;
+}
+footer ul li span {
+  font: 400 11px/16px "Pretendard";
+  letter-spacing: -0.025em;
+  color: #767676;
 }
 
 /*# sourceMappingURL=layout.css.map */
