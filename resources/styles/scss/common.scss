@@ -58,6 +58,8 @@ $font-03grey: #505050;
 $font-04grey: #767676;
 $font-disabled: #999999;
 
+$mb-h4-sb: 600 20px/26px $font;
+$mb-h5-sb: 600 18px/26px $font;
 $mb-t5-sb: 600 18px/26px $font;
 $mb-t4-rg: 400 16px/24px $font;
 $mb-b2-sb: 600 14px/20px $font;
@@ -113,6 +115,16 @@ $brand: #33BA8A;
 
 // NOTE: 버튼
 .btn{
+    background-color: unset;
+    border: unset;
+    outline: unset;
+    &.plus{
+        border-radius: 8px;
+        width: 40px;
+        aspect-ratio: 1;
+        background: $brand url(/resources/images/icons/ic-plus.svg) center/20px no-repeat;
+        box-shadow: 0 4px 16px 0 #00000014;
+    }
     &-more{
         font: $mb-c2-rg;
         color: $font-02black;
@@ -234,7 +246,7 @@ $brand: #33BA8A;
         }
         img{
             width: 100%;
-            object-fit: center;
+            object-fit: cover;
             border-radius: 8px;
         }
     }
@@ -271,8 +283,48 @@ $brand: #33BA8A;
 
         img{
             width: 100%;
-            object-fit: center;
+            aspect-ratio: 1.8;
+            object-fit: cover;
             border-radius: 4px;
+        }
+
+        &.detail{
+            ul{
+                grid-template-columns: 1fr;
+            }
+            a{
+                display: flex;
+            }
+            div{
+                padding-left: 14px;
+            }
+            span{
+                display: block;
+                &.f{
+                    &-name{
+                        font: $mb-h5-sb;
+                        letter-spacing: -0.025em;
+                        color: $font-02black;
+                    }
+                    &-size::before{
+                        content: unset;
+                    }
+                    &-addDate{
+                        margin-top: 24px;
+                        &::before{
+                            content: "구매일자 : ";
+                        }
+                    }
+                    &-useByDate::before{
+                        content: "소비기한 : ";
+                    }
+                }
+            }
+            img{
+                width: 124px;
+                aspect-ratio: 1;
+                object-fit: cover;
+            }
         }
     }
 

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 Copyright (c) 2021 Kil Hyung-jin, with Reserved Font Name Pretendard.
 https://github.com/orioncactus/pretendard
@@ -154,6 +155,18 @@ button {
   background-color: rgba(51, 186, 138, 0.2);
 }
 
+.btn {
+  background-color: unset;
+  border: unset;
+  outline: unset;
+}
+.btn.plus {
+  border-radius: 8px;
+  width: 40px;
+  aspect-ratio: 1;
+  background: #33BA8A url(/resources/images/icons/ic-plus.svg) center/20px no-repeat;
+  box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.0784313725);
+}
 .btn-more {
   font: 400 12px/18px "Pretendard";
   color: #111111;
@@ -261,7 +274,7 @@ button {
 }
 .list-recipe img {
   width: 100%;
-  object-fit: center;
+  object-fit: cover;
   border-radius: 8px;
 }
 .list-food + .list-food {
@@ -288,8 +301,43 @@ button {
 }
 .list-food img {
   width: 100%;
-  object-fit: center;
+  aspect-ratio: 1.8;
+  object-fit: cover;
   border-radius: 4px;
+}
+.list-food.detail ul {
+  grid-template-columns: 1fr;
+}
+.list-food.detail a {
+  display: flex;
+}
+.list-food.detail div {
+  padding-left: 14px;
+}
+.list-food.detail span {
+  display: block;
+}
+.list-food.detail span.f-name {
+  font: 600 18px/26px "Pretendard";
+  letter-spacing: -0.025em;
+  color: #111111;
+}
+.list-food.detail span.f-size::before {
+  content: unset;
+}
+.list-food.detail span.f-addDate {
+  margin-top: 24px;
+}
+.list-food.detail span.f-addDate::before {
+  content: "구매일자 : ";
+}
+.list-food.detail span.f-useByDate::before {
+  content: "소비기한 : ";
+}
+.list-food.detail img {
+  width: 124px;
+  aspect-ratio: 1;
+  object-fit: cover;
 }
 .list-tag ul {
   margin-top: unset;
@@ -402,6 +450,11 @@ footer ul li span {
   font: 400 11px/16px "Pretendard";
   letter-spacing: -0.025em;
   color: #767676;
+}
+footer .floating {
+  position: absolute;
+  bottom: 62px;
+  right: 16px;
 }
 
 /*# sourceMappingURL=layout.css.map */
