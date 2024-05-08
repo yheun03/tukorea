@@ -118,9 +118,6 @@ button {
   outline: unset;
 }
 
-.ipt {
-  display: inline-block;
-}
 .ipt + .ipt {
   margin-top: 24px;
 }
@@ -136,8 +133,8 @@ button {
 }
 .ipt input,
 .ipt select {
+  flex: 1;
   display: inline-block;
-  margin-top: 8px;
   font: 400 16px/24px "Pretendard";
   color: #111111;
   letter-spacing: -0.025em;
@@ -153,6 +150,12 @@ button {
 .ipt select:focus {
   outline: unset;
   background-color: rgba(51, 186, 138, 0.2);
+}
+.ipt > div {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .btn {
@@ -472,28 +475,28 @@ footer .floating {
   right: 16px;
 }
 
-.addFood img {
+.foodInsertIntro img {
   width: 100%;
   padding-inline: 16px;
   margin-block: 96px 24px;
 }
-.addFood p {
+.foodInsertIntro p {
   letter-spacing: -0.025em;
   color: #111111;
   text-align: center;
 }
-.addFood p.title {
+.foodInsertIntro p.title {
   font: 600 18px/26px "Pretendard";
   margin-block: 24px 16px;
 }
-.addFood p.dscpt {
+.foodInsertIntro p.dscpt {
   font: 200 14px/20px "Pretendard";
 }
-.addFood .btn-wrap {
+.foodInsertIntro .btn-wrap {
   margin-top: 96px;
   padding-inline: 40px;
 }
-.addFood .btn-wrap .btn + .btn {
+.foodInsertIntro .btn-wrap .btn + .btn {
   margin-top: 8px;
 }
 
