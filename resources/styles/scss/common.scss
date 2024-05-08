@@ -60,12 +60,14 @@ $font-disabled: #999999;
 
 $mb-t5-sb: 600 18px/26px $font;
 $mb-t4-rg: 400 16px/24px $font;
+$mb-b2-sb: 600 14px/20px $font;
 $mb-b2-rg: 400 14px/20px $font;
 $mb-c1-rg: 400 13px/18px $font;
 $mb-c2-sb: 600 12px/18px $font;
 $mb-c2-rg: 400 12px/18px $font;
 $mb-c3-rg: 400 11px/16px $font;
 
+$line-black: #111111;
 $line-regular: #E5E5EC;
 
 $bg-white: #ffffff;
@@ -145,12 +147,13 @@ $brand: #33BA8A;
         display: inline-flex;
     }
     li{
+        font-size: 12px;
         display: inline-block;
-        width: 12px;
+        width: 1em;
         aspect-ratio: 1;
-        background: url(/resources/images/icons/ic-star.svg) 0/24px no-repeat;
+        background: url(/resources/images/icons/ic-star.svg) 0/2em no-repeat;
         &.active{
-            background-position: -12px;
+            background-position: -1em;
         }
     }
     span{
@@ -236,6 +239,43 @@ $brand: #33BA8A;
         }
     }
 
+    // 식자재 리스트
+    &-food{
+        & + &{
+            margin-top: 24px;
+        }
+        & > ul{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 16px;
+        }
+        a{
+            span{
+                &,
+                &::before{
+                    font: $mb-c1-rg;
+                    letter-spacing: -0.025em;
+                    color: $font-02black;
+                }
+                &.f-size::before{
+                    content: " - ";
+                }
+                &.f-useByDate::before{
+                    content: " ~ ";
+                }
+            }
+            div{
+                margin-top: 12px
+            }
+        }
+
+        img{
+            width: 100%;
+            object-fit: center;
+            border-radius: 4px;
+        }
+    }
+
     // 해시태그
     &-tag{
         ul{
@@ -251,7 +291,32 @@ $brand: #33BA8A;
         }
     }
 }
-
+.tab{
+    &-filter{
+        table{
+            width: 100%;
+            border-collapse: collapse;
+            td{
+                border: 1px solid $line-regular;
+                font: $mb-b2-rg;
+                color: $font-04grey;
+                a{
+                    display: block;
+                    padding-block: 12px;
+                    text-align: center;
+                    font: inherit;
+                    letter-spacing: -0.025em;
+                    color: inherit;
+                }
+                &.active{
+                    font: $mb-b2-sb;
+                    border-color: $line-black;
+                    color: $font-02black;
+                }
+            }
+        }
+    }
+}
 .banner{
     margin-block: unset;
     padding-inline: unset;

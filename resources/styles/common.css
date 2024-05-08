@@ -185,13 +185,14 @@ button {
   display: inline-flex;
 }
 .review-star li {
+  font-size: 12px;
   display: inline-block;
-  width: 12px;
+  width: 1em;
   aspect-ratio: 1;
-  background: url(/resources/images/icons/ic-star.svg) 0/24px no-repeat;
+  background: url(/resources/images/icons/ic-star.svg) 0/2em no-repeat;
 }
 .review-star li.active {
-  background-position: -12px;
+  background-position: -1em;
 }
 .review-star span {
   font: 400 13px/18px "Pretendard";
@@ -263,6 +264,33 @@ button {
   object-fit: center;
   border-radius: 8px;
 }
+.list-food + .list-food {
+  margin-top: 24px;
+}
+.list-food > ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 16px;
+}
+.list-food a span, .list-food a span::before {
+  font: 400 13px/18px "Pretendard";
+  letter-spacing: -0.025em;
+  color: #111111;
+}
+.list-food a span.f-size::before {
+  content: " - ";
+}
+.list-food a span.f-useByDate::before {
+  content: " ~ ";
+}
+.list-food a div {
+  margin-top: 12px;
+}
+.list-food img {
+  width: 100%;
+  object-fit: center;
+  border-radius: 4px;
+}
 .list-tag ul {
   margin-top: unset;
 }
@@ -273,6 +301,29 @@ button {
   padding: 2px 4px;
   background-color: #F7F7FB;
   display: inline-block;
+}
+
+.tab-filter table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.tab-filter table td {
+  border: 1px solid #E5E5EC;
+  font: 400 14px/20px "Pretendard";
+  color: #767676;
+}
+.tab-filter table td a {
+  display: block;
+  padding-block: 12px;
+  text-align: center;
+  font: inherit;
+  letter-spacing: -0.025em;
+  color: inherit;
+}
+.tab-filter table td.active {
+  font: 600 14px/20px "Pretendard";
+  border-color: #111111;
+  color: #111111;
 }
 
 .banner {
