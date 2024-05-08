@@ -394,14 +394,11 @@ $brand: #33BA8A;
         }
     }
 }
-.banner{
-    margin-block: unset;
-    padding-inline: unset;
+.imageUploader{
     img{
         width: 100%;
+        aspect-ratio: 335/188;
+        object-fit: cover;
         border-radius: 8px;
-    }
-    li{
-        padding-inline: 4px;
     }
 }

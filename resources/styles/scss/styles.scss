@@ -1,6 +1,18 @@
 @charset 'utf-8';
 @import 'layout.scss';
 
+.banner{
+    margin-block: unset;
+    padding-inline: unset;
+    img{
+        width: 100%;
+        border-radius: 8px;
+    }
+    li{
+        padding-inline: 4px;
+    }
+}
+
 .foodInsert{
     &Intro{
         img{
@@ -29,6 +41,19 @@
         }
     }
     &Area{
-        // text-align: center;
+        padding: 26px 20px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 16px;
+        .full{
+            grid-column: span 2;
+        }
+        .ipt{
+            margin-top: unset;
+            input,
+            select{
+                width: 100%;
+            }
+        }
     }
 }

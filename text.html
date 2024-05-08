@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="/resources/scripts/jquery-2.2.4.min.js"></script>
     <style>
         .rating {
   display: flex;
@@ -47,5 +48,26 @@
         <label for="star1"></label>
       </div>
       <div id="averageRating">평균 평점: </div>
+
+
+      <div class="imageUploader">
+        <input type="file" id="imageUploaderInput" accept="image/*" style="display: none;">
+        <label for="imageUploaderInput">
+          <img src="placeholder.png" alt="Select Image" id="imageUploaderInputPreview">
+        </label>
+        <div id="previewContainer"></div>
+      </div>
+      <script>$(document).ready(function() {
+        $('#imageUploaderInput').on('change', function() {
+          var input = this;
+          if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+              $('#imageUploaderInputPreview').attr('src', e.target.result);
+            }
+            reader.readAsDataURL(input.files[0]);
+          }
+        });
+      });</script>
 </body>
 </html>

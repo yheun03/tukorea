@@ -392,16 +392,11 @@ button {
   color: #111111;
 }
 
-.banner {
-  margin-block: unset;
-  padding-inline: unset;
-}
-.banner img {
+.imageUploader img {
   width: 100%;
+  aspect-ratio: 335/188;
+  object-fit: cover;
   border-radius: 8px;
-}
-.banner li {
-  padding-inline: 4px;
 }
 
 .wrap {
@@ -439,6 +434,7 @@ header ul img {
 section {
   min-height: calc(100vh - 108px);
   padding-block: 16px 10px;
+  overflow-x: hidden;
 }
 
 footer {

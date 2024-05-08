@@ -392,16 +392,11 @@ button {
   color: #111111;
 }
 
-.banner {
-  margin-block: unset;
-  padding-inline: unset;
-}
-.banner img {
+.imageUploader img {
   width: 100%;
+  aspect-ratio: 335/188;
+  object-fit: cover;
   border-radius: 8px;
-}
-.banner li {
-  padding-inline: 4px;
 }
 
 .wrap {
@@ -439,6 +434,7 @@ header ul img {
 section {
   min-height: calc(100vh - 108px);
   padding-block: 16px 10px;
+  overflow-x: hidden;
 }
 
 footer {
@@ -475,6 +471,18 @@ footer .floating {
   right: 16px;
 }
 
+.banner {
+  margin-block: unset;
+  padding-inline: unset;
+}
+.banner img {
+  width: 100%;
+  border-radius: 8px;
+}
+.banner li {
+  padding-inline: 4px;
+}
+
 .foodInsertIntro img {
   width: 100%;
   padding-inline: 16px;
@@ -498,6 +506,22 @@ footer .floating {
 }
 .foodInsertIntro .btn-wrap .btn + .btn {
   margin-top: 8px;
+}
+.foodInsertArea {
+  padding: 26px 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 16px;
+}
+.foodInsertArea .full {
+  grid-column: span 2;
+}
+.foodInsertArea .ipt {
+  margin-top: unset;
+}
+.foodInsertArea .ipt input,
+.foodInsertArea .ipt select {
+  width: 100%;
 }
 
 /*# sourceMappingURL=styles.css.map */
