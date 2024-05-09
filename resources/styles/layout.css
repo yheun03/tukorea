@@ -171,9 +171,19 @@ button {
   padding: 14px 16px;
   border-radius: 6px;
 }
+.btn.sm {
+  font: 400 12px/18px "Pretendard";
+  padding: 3px 8px;
+  border-radius: 4px;
+}
 .btn.primary {
   background-color: #33BA8A;
   color: #ffffff;
+  border-color: #33BA8A;
+}
+.btn.primary.rvs {
+  background-color: #ffffff;
+  color: #111111;
   border-color: #33BA8A;
 }
 .btn.white {
@@ -181,13 +191,25 @@ button {
   color: #111111;
   border-color: #E5E5EC;
 }
-.btn.plus {
+.btn.square {
   border-radius: 8px;
-  width: 40px;
+  width: 50px;
   aspect-ratio: 1;
-  background: #33BA8A url(/resources/images/icons/ic-plus.svg) center/20px no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn.square img {
+  width: 20px;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+.btn.square.sm {
+  width: 40px;
+}
+.btn.square.primary {
+  background-color: #33BA8A;
   border-color: #33BA8A;
-  box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.0784313725);
 }
 .btn.full {
   width: 100%;
@@ -497,4 +519,7 @@ footer .floating {
   position: absolute;
   bottom: 62px;
   right: 16px;
+}
+footer .floating .btn {
+  box-shadow: 0 4px 16px 0 rgba(17, 17, 17, 0.08);
 }/*# sourceMappingURL=layout.css.map */

@@ -176,6 +176,10 @@ button {
   padding: 3px 8px;
   border-radius: 4px;
 }
+.btn.clear {
+  background-color: transparent;
+  border-color: transparent;
+}
 .btn.primary {
   background-color: #33BA8A;
   color: #ffffff;
@@ -191,13 +195,26 @@ button {
   color: #111111;
   border-color: #E5E5EC;
 }
-.btn.plus {
-  border-radius: 8px;
-  width: 40px;
+.btn.square {
+  width: 50px;
   aspect-ratio: 1;
-  background: #33BA8A url(/resources/images/icons/ic-plus.svg) center/20px no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+.btn.square img {
+  width: 20px;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+.btn.square.sm {
+  width: 40px;
+  border-radius: 8px;
+}
+.btn.square.primary {
+  background-color: #33BA8A;
   border-color: #33BA8A;
-  box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.0784313725);
 }
 .btn.full {
   width: 100%;
@@ -508,6 +525,9 @@ footer .floating {
   bottom: 62px;
   right: 16px;
 }
+footer .floating .btn {
+  box-shadow: 0 4px 16px 0 rgba(17, 17, 17, 0.08);
+}
 
 .banner {
   margin-block: unset;
@@ -562,6 +582,54 @@ footer .floating {
   width: 100%;
 }
 
+.recipeUse > ol {
+  padding-inline: 20px;
+}
+.recipeUse > ol > li {
+  counter-increment: recipe-step;
+  margin-bottom: 60px;
+}
+.recipeUse > ol > li::before {
+  content: counter(recipe-step) ".";
+  font: 600 20px/28px "Pretendard";
+  letter-spacing: -0.025em;
+  color: #111111;
+}
+.recipeUse > ol > li > img {
+  margin-top: 12px;
+  width: 100%;
+  aspect-ratio: 335/250;
+  object-fit: cover;
+}
+.recipeUse > ol .r-step-title {
+  font: 600 18px/26px "Pretendard";
+  margin-top: 16px;
+}
+.recipeUse > ol .r-step-dscpt {
+  font: 400 13px/18px "Pretendard";
+  margin-top: 4px;
+  color: #767676;
+}
+.recipeUse > ol .r-step-timer {
+  margin-top: 4px;
+  padding-block: 20px;
+}
+.recipeUse > ol .r-step-timer p {
+  font: 600 40px/52px "Pretendard";
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  color: #33BA8A;
+  text-align: center;
+}
+.recipeUse > ol .r-step-timer p span + span::before {
+  content: " : ";
+}
+.recipeUse > ol .r-step-timer ul {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  margin-top: 20px;
+}
 .recipeUseThumbnail .r-thumbnail, .recipeUseThumbnail .r-infor, .recipeUseThumbnail .r-information {
   padding-inline: 20px;
 }

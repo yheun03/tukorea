@@ -59,6 +59,58 @@
 }
 
 .recipeUse{
+
+    & > ol{
+        padding-inline: 20px;
+        & > li{
+            counter-increment: recipe-step;
+            margin-bottom: 60px;
+            &::before{
+                content: counter(recipe-step)".";
+                font: $mb-h4-sb;
+                letter-spacing: -0.025em;
+                color: $font-02black;
+            }
+            & > img{
+                margin-top: 12px;
+                width: 100%;
+                aspect-ratio: 335/250;
+                object-fit: cover;
+            }
+        }
+        .r-step{
+            &-title{
+                font: $mb-h5-sb;
+                margin-top: 16px;
+            }
+            &-dscpt{
+                font: $mb-c1-rg;
+                margin-top: 4px;
+                color: $font-04grey;
+            }
+            &-timer{
+                margin-top: 4px;
+                padding-block: 20px;
+                p{
+                    font: $mb-d3-sb;
+                    font-weight: 800;
+                    letter-spacing: -0.025em;
+                    color: $brand;
+                    text-align: center;
+                    span + span::before{
+                        content: " : ";
+                    }
+                }
+                ul{
+                    display: flex;
+                    gap: 32px;
+                    justify-content: center;
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+
     &Thumbnail{
         .r{
             &-thumbnail,

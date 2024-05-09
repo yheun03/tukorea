@@ -176,6 +176,10 @@ button {
   padding: 3px 8px;
   border-radius: 4px;
 }
+.btn.clear {
+  background-color: transparent;
+  border-color: transparent;
+}
 .btn.primary {
   background-color: #33BA8A;
   color: #ffffff;
@@ -191,13 +195,26 @@ button {
   color: #111111;
   border-color: #E5E5EC;
 }
-.btn.plus {
-  border-radius: 8px;
-  width: 40px;
+.btn.square {
+  width: 50px;
   aspect-ratio: 1;
-  background: #33BA8A url(/resources/images/icons/ic-plus.svg) center/20px no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+.btn.square img {
+  width: 20px;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+.btn.square.sm {
+  width: 40px;
+  border-radius: 8px;
+}
+.btn.square.primary {
+  background-color: #33BA8A;
   border-color: #33BA8A;
-  box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.0784313725);
 }
 .btn.full {
   width: 100%;

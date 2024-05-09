@@ -58,6 +58,7 @@ $font-03grey: #505050;
 $font-04grey: #767676;
 $font-disabled: #999999;
 
+$mb-d3-sb: 600 40px/52px $font;
 $mb-h4-sb: 600 20px/28px $font;
 $mb-h5-sb: 600 18px/26px $font;
 $mb-t5-sb: 600 18px/26px $font;
@@ -148,6 +149,11 @@ $brand: #33BA8A;
         border-radius: 4px;
     }
 
+    &.clear{
+        background-color: transparent;
+        border-color: transparent;
+    }
+
     &.primary{
         background-color: $brand;
         color: $font-01white;
@@ -166,13 +172,26 @@ $brand: #33BA8A;
         border-color: $line-regular;
     }
 
-    &.plus{
-        border-radius: 8px;
-        width: 40px;
+    &.square{
+        width: 50px;
         aspect-ratio: 1;
-        background: $brand url(/resources/images/icons/ic-plus.svg) center/20px no-repeat;
-        border-color: $brand;
-        box-shadow: 0 4px 16px 0 #00000014;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        img{
+            width: 20px;
+            aspect-ratio: 1;
+            object-fit: cover;
+        }
+        &.sm{
+            width: 40px;
+            border-radius: 8px;
+        }
+        &.primary{
+            background-color: $brand;
+            border-color: $brand;
+        }
     }
     &.full{
         width: 100%;
