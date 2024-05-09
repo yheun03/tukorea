@@ -171,9 +171,19 @@ button {
   padding: 14px 16px;
   border-radius: 6px;
 }
+.btn.sm {
+  font: 400 12px/18px "Pretendard";
+  padding: 3px 8px;
+  border-radius: 4px;
+}
 .btn.primary {
   background-color: #33BA8A;
   color: #ffffff;
+  border-color: #33BA8A;
+}
+.btn.primary.rvs {
+  background-color: #ffffff;
+  color: #111111;
   border-color: #33BA8A;
 }
 .btn.white {

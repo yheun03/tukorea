@@ -171,9 +171,19 @@ button {
   padding: 14px 16px;
   border-radius: 6px;
 }
+.btn.sm {
+  font: 400 12px/18px "Pretendard";
+  padding: 3px 8px;
+  border-radius: 4px;
+}
 .btn.primary {
   background-color: #33BA8A;
   color: #ffffff;
+  border-color: #33BA8A;
+}
+.btn.primary.rvs {
+  background-color: #ffffff;
+  color: #111111;
   border-color: #33BA8A;
 }
 .btn.white {
@@ -550,4 +560,161 @@ footer .floating {
 .foodInsertArea .ipt input,
 .foodInsertArea .ipt select {
   width: 100%;
+}
+
+.recipeUseThumbnail .r-thumbnail, .recipeUseThumbnail .r-infor, .recipeUseThumbnail .r-information {
+  padding-inline: 20px;
+}
+.recipeUseThumbnail .r-thumbnail {
+  position: relative;
+}
+.recipeUseThumbnail .r-thumbnail > img {
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 335/250;
+}
+.recipeUseThumbnail .r-thumbnail > div {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  right: 20px;
+  height: 100%;
+  background: linear-gradient(140deg, rgba(17, 17, 17, 0) 60%, #111111);
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 10px;
+}
+.recipeUseThumbnail .r-thumbnail ul {
+  display: flex;
+  gap: 6px;
+}
+.recipeUseThumbnail .r-thumbnail ul img {
+  width: 24px;
+  aspect-ratio: 1;
+}
+.recipeUseThumbnail .r-infor {
+  margin-top: 16px;
+}
+.recipeUseThumbnail .r-infor ul {
+  margin-top: 32px;
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+}
+.recipeUseThumbnail .r-infor ul img {
+  width: 28px;
+  aspect-ratio: 1;
+}
+.recipeUseThumbnail .r-infor ul li {
+  display: inline-flex;
+  gap: 4px;
+  align-items: center;
+}
+.recipeUseThumbnail .r-infor ul span {
+  font: 400 12px/18px "Pretendard";
+  letter-spacing: -0.025em;
+  color: #111111;
+}
+.recipeUseThumbnail .r-infor .r-title {
+  font: 600 20px/28px "Pretendard";
+  letter-spacing: -0.025em;
+  color: #111111;
+}
+.recipeUseThumbnail .r-infor .r-dscpt {
+  margin-top: 4px;
+  font: 400 13px/18px "Pretendard";
+  letter-spacing: -0.025em;
+  color: #767676;
+}
+.recipeUseThumbnail .r-infor-writer {
+  margin-top: 28px;
+  border: solid #F1F1F5;
+  border-block-width: 1px;
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+}
+.recipeUseThumbnail .r-infor-writer > div {
+  flex: 1;
+  padding-inline: 16px;
+}
+.recipeUseThumbnail .r-infor-writer .r-profile {
+  width: 42px;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.recipeUseThumbnail .r-infor-writer .r-writer {
+  font: 400 13px/18px "Pretendard";
+  letter-spacing: -0.025em;
+  color: #111111;
+}
+.recipeUseThumbnail .r-infor-writer .r-writer span {
+  font: 600 15px/22px "Pretendard";
+}
+.recipeUseThumbnail .r-infor-writer .r-writer-dscpt {
+  font: 400 12px/18px "Pretendard";
+  letter-spacing: -0.025em;
+  color: #767676;
+}
+.recipeUseThumbnail .r-information table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.recipeUseThumbnail .r-information table + table {
+  margin-top: 8px;
+}
+.recipeUseThumbnail .r-information table + table tbody {
+  border: unset;
+}
+.recipeUseThumbnail .r-information table thead {
+  border-bottom: 1px solid #111111;
+  text-align: left;
+  font: 600 18px/26px "Pretendard";
+  letter-spacing: -0.025em;
+  color: #111111;
+}
+.recipeUseThumbnail .r-information table thead th {
+  padding-block: 16px 12px;
+}
+.recipeUseThumbnail .r-information table tbody {
+  font: 400 14px/20px "Pretendard";
+  letter-spacing: -0.025em;
+  color: #111111;
+  border-bottom: 1px solid #F1F1F5;
+}
+.recipeUseThumbnail .r-information table tbody tr:first-child td {
+  padding-top: 24px;
+}
+.recipeUseThumbnail .r-information table tbody tr:last-child td {
+  padding-bottom: 32px;
+}
+.recipeUseThumbnail .r-information table tbody th {
+  width: 100px;
+  font-weight: 400;
+  text-align: left;
+}
+.recipeUseThumbnail .r-information table tbody td {
+  text-align: center;
+  padding: 8px;
+}
+.recipeUseThumbnail .r-information table tbody td span.lack {
+  color: #DC0000;
+}
+.recipeUseThumbnail .r-information table tbody td span + span {
+  font: 400 12px/18px "Pretendard";
+  color: rgba(118, 118, 118, 0.5);
+}
+.recipeUseThumbnail .r-information table tbody td span + span::before {
+  content: "/";
+}
+.recipeUseThumbnail .r-information table tbody td .btn {
+  display: inline-block;
+  margin-left: auto;
+}
+.recipeUseThumbnail .r-information table tbody td:has(.btn:only-child) {
+  width: 0;
+  padding-inline: unset;
+  text-align: right;
 }/*# sourceMappingURL=styles.css.map */
