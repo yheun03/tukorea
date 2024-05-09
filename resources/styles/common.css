@@ -186,6 +186,7 @@ button {
   width: 40px;
   aspect-ratio: 1;
   background: #33BA8A url(/resources/images/icons/ic-plus.svg) center/20px no-repeat;
+  border-color: #33BA8A;
   box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.0784313725);
 }
 .btn.full {

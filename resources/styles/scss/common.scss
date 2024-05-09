@@ -153,6 +153,7 @@ $brand: #33BA8A;
         width: 40px;
         aspect-ratio: 1;
         background: $brand url(/resources/images/icons/ic-plus.svg) center/20px no-repeat;
+        border-color: $brand;
         box-shadow: 0 4px 16px 0 #00000014;
     }
     &.full{

@@ -186,6 +186,7 @@ button {
   width: 40px;
   aspect-ratio: 1;
   background: #33BA8A url(/resources/images/icons/ic-plus.svg) center/20px no-repeat;
+  border-color: #33BA8A;
   box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.0784313725);
 }
 .btn.full {
@@ -436,6 +437,18 @@ header ul li {
 }
 header ul img {
   height: 28px;
+}
+header ul:only-child {
+  width: 100%;
+}
+header ul:only-child li:first-child {
+  margin: unset;
+}
+header ul:only-child li:first-child + li {
+  margin-left: auto;
+}
+header:has(ul:only-child) {
+  padding-left: 10px;
 }
 
 section {

@@ -38,6 +38,18 @@ header{
         img{
             height: 28px;
         }
+        &:only-child{
+            width: 100%;
+            li:first-child{
+                margin: unset;
+                & + li{
+                    margin-left: auto;
+                }
+            }
+        }
+    }
+    &:has(ul:only-child){
+        padding-left: 10px;
     }
 }
 section{
