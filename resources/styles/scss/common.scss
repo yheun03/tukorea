@@ -71,6 +71,7 @@ $mb-c2-rg: 400 12px/18px $font;
 $mb-c3-rg: 400 11px/16px $font;
 
 $btn1-rg: 400 16px/24px $font;
+$btn2-rg: 400 14px/20px $font;
 
 $line-black: #111111;
 $line-regular: #E5E5EC;
@@ -128,6 +129,7 @@ $brand: #33BA8A;
     border: unset;
     outline: unset;
     background-color: #F7F7FB;
+    border: 1px solid #F7F7FB;
     font: $btn1-rg;
     letter-spacing: -0.025em;
     color: $font-03grey;
@@ -137,6 +139,13 @@ $brand: #33BA8A;
     &.primary{
         background-color: $brand;
         color: $font-01white;
+        border-color: $brand;
+    }
+
+    &.white{
+        background-color: $bg-white;
+        color: $font-02black;
+        border-color: $line-regular;
     }
 
     &.plus{

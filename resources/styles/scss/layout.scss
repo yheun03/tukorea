@@ -47,7 +47,7 @@ section{
 }
 footer{
     position: sticky;
-    height: $height-footer;
+    min-height: $height-footer;
     bottom: 0;
     background-color: $bg-white;
     box-shadow: $shadow-footer;
@@ -69,6 +69,14 @@ footer{
                 font: $mb-c3-rg;
                 letter-spacing: -0.025em;
                 color: $font-04grey;
+            }
+        }
+        &.btn-wrap{
+            padding: 12px 20px;
+            .btn{
+                border-radius: unset;
+                text-align: center;
+                font: $btn2-rg
             }
         }
     }

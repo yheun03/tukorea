@@ -164,6 +164,7 @@ button {
   border: unset;
   outline: unset;
   background-color: #F7F7FB;
+  border: 1px solid #F7F7FB;
   font: 400 16px/24px "Pretendard";
   letter-spacing: -0.025em;
   color: #505050;
@@ -173,6 +174,12 @@ button {
 .btn.primary {
   background-color: #33BA8A;
   color: #ffffff;
+  border-color: #33BA8A;
+}
+.btn.white {
+  background-color: #ffffff;
+  color: #111111;
+  border-color: #E5E5EC;
 }
 .btn.plus {
   border-radius: 8px;
@@ -439,7 +446,7 @@ section {
 
 footer {
   position: sticky;
-  height: 52px;
+  min-height: 52px;
   bottom: 0;
   background-color: #ffffff;
   box-shadow: 0 -10px 5px 0 rgba(0, 0, 0, 0.0588235294);
@@ -464,6 +471,14 @@ footer ul li span {
   font: 400 11px/16px "Pretendard";
   letter-spacing: -0.025em;
   color: #767676;
+}
+footer ul.btn-wrap {
+  padding: 12px 20px;
+}
+footer ul.btn-wrap .btn {
+  border-radius: unset;
+  text-align: center;
+  font: 400 14px/20px "Pretendard";
 }
 footer .floating {
   position: absolute;
@@ -522,6 +537,4 @@ footer .floating {
 .foodInsertArea .ipt input,
 .foodInsertArea .ipt select {
   width: 100%;
-}
-
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */
