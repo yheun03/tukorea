@@ -314,6 +314,11 @@ button {
   margin-top: 16px;
 }
 
+.review-star {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
 .review-star ul {
   display: inline-flex;
 }
@@ -322,7 +327,7 @@ button {
   display: inline-block;
   width: 1em;
   aspect-ratio: 1;
-  background: url(/resources/images/icons/ic-star.svg) 0/2em no-repeat;
+  background: url(/resources/images/icons/ic-star.svg) 0/3em no-repeat;
 }
 .review-star li.active {
   background-position: -1em;
@@ -332,6 +337,16 @@ button {
   letter-spacing: 0.025em;
   color: #111111;
   vertical-align: bottom;
+}
+.review-star label {
+  font-size: 24px;
+  width: 1em;
+  aspect-ratio: 1;
+  object-fit: cover;
+  background: url(/resources/images/icons/ic-star.svg) -2em/3em no-repeat;
+}
+.review-star label:has(input:checked) ~ label {
+  background-position: 0;
 }
 
 .list {
@@ -482,9 +497,6 @@ button {
   padding: 2px 4px;
   background-color: #F7F7FB;
   display: inline-block;
-}
-.list-foodBuyUseByDate {
-  padding-inline: 24px;
 }
 .list-foodBuyUseByDate h2 {
   font: 400 20px/28px "Pretendard";

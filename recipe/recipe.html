@@ -39,23 +39,95 @@
                 <li><a href=""><img src="/resources/images/icons/ic-menu.svg" alt=""></a></li>
             </ul>
         </header>
+        <nav>
+            <div class="nav-content">
+                <div class="nav-header">
+                    <h2><span>레시피 리스트</span><a href=""><img src="/resources/images/icons/ic-close.svg" alt=""></a></h2>
+                    <p>총 <span>7</span>단계 중 <span>1</span>단계 요리중</p>
+                </div>
+                <div class="nav-body">
+                    <div class="recipeUse">
+                        <ol>
+                            <li class="active">
+                                <img src="/resources/images/recipe/temp.png" alt="">
+                                <div>
+                                    <p class="r-step-title">마른표고버섯 5개를 물에 충분히 불립니다.</p>
+                                    <p class="r-step-dscpt">표고버섯은 생략 가능합니다.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="/resources/images/recipe/temp.png" alt="">
+                                <div>
+                                    <p class="r-step-title">마른표고버섯 5개를 물에 충분히 불립니다.</p>
+                                    <p class="r-step-dscpt">표고버섯은 생략 가능합니다.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="/resources/images/recipe/temp.png" alt="">
+                                <div>
+                                    <p class="r-step-title">마른표고버섯 5개를 물에 충분히 불립니다.</p>
+                                    <p class="r-step-dscpt">표고버섯은 생략 가능합니다.</p>
+                                </div>
+                                <div class="r-step-timer">
+                                    <p>
+                                        <span>00</span>
+                                        <span>00</span>
+                                        <span>00</span>
+                                    </p>
+                                    <ul>
+                                        <li>
+                                            <a href="" class="btn square clear">
+                                                <img src="/resources/images/recipe/timer/ic-pause.svg" alt="">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="" class="btn square primary">
+                                                <img src="/resources/images/recipe/timer/ic-start.svg" alt="">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="" class="btn square clear">
+                                                <img src="/resources/images/recipe/timer/ic-refresh.svg" alt="">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="/resources/images/recipe/temp.png" alt="">
+                                <div>
+                                    <p class="r-step-title">마른표고버섯 5개를 물에 충분히 불립니다.</p>
+                                    <p class="r-step-dscpt">표고버섯은 생략 가능합니다.</p>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </nav>
         <section>
             <div class="recipeUse">
                 <ol>
                     <li>
                         <img src="/resources/images/recipe/temp.png" alt="">
-                        <div class="r-step-title">마른표고버섯 5개를 물에 충분히 불립니다.</div>
-                        <div class="r-step-dscpt">표고버섯은 생략 가능합니다.</div>
+                        <div>
+                            <p class="r-step-title">마른표고버섯 5개를 물에 충분히 불립니다.</p>
+                            <p class="r-step-dscpt">표고버섯은 생략 가능합니다.</p>
+                        </div>
                     </li>
                     <li>
                         <img src="/resources/images/recipe/temp.png" alt="">
-                        <div class="r-step-title">마른표고버섯 5개를 물에 충분히 불립니다.</div>
-                        <div class="r-step-dscpt">표고버섯은 생략 가능합니다.</div>
+                        <div>
+                            <p class="r-step-title">마른표고버섯 5개를 물에 충분히 불립니다.</p>
+                            <p class="r-step-dscpt">표고버섯은 생략 가능합니다.</p>
+                        </div>
                     </li>
                     <li>
                         <img src="/resources/images/recipe/temp.png" alt="">
-                        <div class="r-step-title">마른표고버섯 5개를 물에 충분히 불립니다.</div>
-                        <div class="r-step-dscpt">표고버섯은 생략 가능합니다.</div>
+                        <div>
+                            <p class="r-step-title">마른표고버섯 5개를 물에 충분히 불립니다.</p>
+                            <p class="r-step-dscpt">표고버섯은 생략 가능합니다.</p>
+                        </div>
                         <div class="r-step-timer">
                             <p>
                                 <span>00</span>
@@ -83,8 +155,10 @@
                     </li>
                     <li>
                         <img src="/resources/images/recipe/temp.png" alt="">
-                        <div class="r-step-title">마른표고버섯 5개를 물에 충분히 불립니다.</div>
-                        <div class="r-step-dscpt">표고버섯은 생략 가능합니다.</div>
+                        <div>
+                            <p class="r-step-title">마른표고버섯 5개를 물에 충분히 불립니다.</p>
+                            <p class="r-step-dscpt">표고버섯은 생략 가능합니다.</p>
+                        </div>
                     </li>
                 </ol>
             </div>
@@ -95,6 +169,38 @@
                 <li><a href="" class="btn primary">다음단계</a></li>
             </ul>
         </footer>
+    </div>
+
+    <div class="modal">
+        <div class="modal-content">
+            <div class="modal-body">
+                <p>요리를 마치셨네요!</p>
+                <p>이번 레시피는 어떠셨나요?</p>
+                <div class="review-star">
+                    <label>
+                        <input type="radio" name="review-star" hidden>
+                    </label>
+                    <label>
+                        <input type="radio" name="review-star" hidden>
+                    </label>
+                    <label>
+                        <input type="radio" name="review-star" hidden>
+                    </label>
+                    <label>
+                        <input type="radio" name="review-star" hidden>
+                    </label>
+                    <label>
+                        <input type="radio" name="review-star" hidden checked>
+                    </label>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="btn-wrap">
+                    <a href="" class="btn">취소</a>
+                    <a href="" class="btn primary">확인</a>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>

@@ -427,3 +427,109 @@
         margin-top: 32px;
     }
 }
+
+// NOTE 각 페이지들 여백
+.list{
+    &-useByDate h2,
+    &-recipe,
+    &-food{
+        padding-inline: 16px;
+    }
+}
+
+.home{
+    [class^=list-]{
+        margin-top: 24px;
+    }
+}
+.foodList{
+    .tab-filter{
+        margin-top: 32px;
+        padding-inline: 16px;
+    }
+    .list-food{
+        margin-block: 16px 24px;
+    }
+
+    &Detail{
+        .list-food{
+            margin-block: 24px;
+        }
+    }
+}
+.foodCalendar{
+    padding-inline: 20px;
+    .tab{
+        margin-top: 8px;
+    }
+    .list-foodBuyUseByDate{
+        padding-inline: 4px;
+    }
+}
+
+.modal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: $bg-dim;
+    z-index: 100;
+    display: none;
+    &-content{
+        width: 310px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        border-radius: 4px;
+        overflow: hidden;
+    }
+    &-body{
+        min-height: 110px;
+        background-color: $bg-white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 36px 16px 24px;
+        p{
+            font: $mb-b2-rg;
+            letter-spacing: -0.025em;
+            color: $font-02black;
+            text-align: center;
+        }
+        ul{
+            margin-top: 10px;
+        }
+        li{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            margin-top: 4px;
+            p{
+                font: $mb-b4-rg;
+                letter-spacing: -0.025em;
+                color: $font-02black;
+                text-align: center;
+            }
+        }
+        .review-star{
+            margin-top: 8px;
+        }
+    }
+    &-footer{
+        .btn-wrap{
+            display: flex;
+            .btn{
+                flex: 1;
+                font: $btn2-sb;
+                text-align: center;
+                border-radius: unset;
+            }
+        }
+    }
+}

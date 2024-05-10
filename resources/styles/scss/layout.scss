@@ -22,7 +22,7 @@ header{
     height: $height-header;
     background-color: $bg-white;
     box-shadow: $shadow-header;
-    z-index: 100;
+    z-index: 10;
     h1{
         img{
             height: 38px;
@@ -55,6 +55,80 @@ header{
         box-shadow: unset;
     }
 }
+nav{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: $bg-dim;
+    z-index: 100;
+    .nav{
+        &-content{
+            width: 260px;
+            height: 100vh;
+            position: absolute;
+            right: 0;
+            overflow: hidden;
+            background-color: $bg-white;
+        }
+        &-header{
+            padding: 20px 16px 0;
+            h2{
+                display: flex;
+                align-items: center;
+                font: $mb-t5-sb;
+                letter-spacing: -0.025em;
+                color: $font-02black;
+                a{
+                    margin-left: auto;
+                }
+            }
+            p{
+                font: $mb-c1-rg;
+                letter-spacing: -0.025em;
+                color: $font-04grey;
+                span + span{
+                    font: $mb-c1-sb;
+                }
+            }
+        }
+        &-body{
+            padding-block: 16px;
+            .recipeUse li{
+                display: flex;
+                flex-wrap: wrap;
+                padding: 8px;
+                gap: 8px;
+                align-items: center;
+                border-radius: 4px;
+                img{
+                    width: 54px;
+                    aspect-ratio: 1;
+                    margin: unset;
+                }
+                div{
+                    flex: 1;
+                }
+                .r-step{
+                    &-title,
+                    &-dscpt{
+                        font: $mb-c3-rg;
+                        margin: unset;
+                    }
+                    &-timer{
+                    }
+                }
+                &.active{
+                    background-color: $bg-regular;
+                }
+                & + li{
+                    margin: unset;
+                }
+            }
+        }
+    }
+}
 section{
     min-height: calc(100vh - ($height-header + $height-footer));
     padding-block: 16px 10px;
@@ -66,7 +140,7 @@ footer{
     bottom: 0;
     background-color: $bg-white;
     box-shadow: $shadow-footer;
-    z-index: 100;
+    z-index: 10;
     ul{
         display: flex;
         li{

@@ -314,6 +314,11 @@ button {
   margin-top: 16px;
 }
 
+.review-star {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
 .review-star ul {
   display: inline-flex;
 }
@@ -322,7 +327,7 @@ button {
   display: inline-block;
   width: 1em;
   aspect-ratio: 1;
-  background: url(/resources/images/icons/ic-star.svg) 0/2em no-repeat;
+  background: url(/resources/images/icons/ic-star.svg) 0/3em no-repeat;
 }
 .review-star li.active {
   background-position: -1em;
@@ -332,6 +337,16 @@ button {
   letter-spacing: 0.025em;
   color: #111111;
   vertical-align: bottom;
+}
+.review-star label {
+  font-size: 24px;
+  width: 1em;
+  aspect-ratio: 1;
+  object-fit: cover;
+  background: url(/resources/images/icons/ic-star.svg) -2em/3em no-repeat;
+}
+.review-star label:has(input:checked) ~ label {
+  background-position: 0;
 }
 
 .list {
@@ -482,9 +497,6 @@ button {
   padding: 2px 4px;
   background-color: #F7F7FB;
   display: inline-block;
-}
-.list-foodBuyUseByDate {
-  padding-inline: 24px;
 }
 .list-foodBuyUseByDate h2 {
   font: 400 20px/28px "Pretendard";
@@ -668,7 +680,7 @@ header {
   height: 56px;
   background-color: #ffffff;
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.0588235294);
-  z-index: 100;
+  z-index: 10;
 }
 header h1 img {
   height: 38px;
@@ -700,6 +712,74 @@ header.effectUnset {
   box-shadow: unset;
 }
 
+nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(17, 17, 17, 0.4);
+  z-index: 100;
+}
+nav .nav-content {
+  width: 260px;
+  height: 100vh;
+  position: absolute;
+  right: 0;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+nav .nav-header {
+  padding: 20px 16px 0;
+}
+nav .nav-header h2 {
+  display: flex;
+  align-items: center;
+  font: 600 18px/26px "Pretendard";
+  letter-spacing: -0.025em;
+  color: #111111;
+}
+nav .nav-header h2 a {
+  margin-left: auto;
+}
+nav .nav-header p {
+  font: 400 13px/18px "Pretendard";
+  letter-spacing: -0.025em;
+  color: #767676;
+}
+nav .nav-header p span + span {
+  font: 600 13px/18px "Pretendard";
+}
+nav .nav-body {
+  padding-block: 16px;
+}
+nav .nav-body .recipeUse li {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 8px;
+  gap: 8px;
+  align-items: center;
+  border-radius: 4px;
+}
+nav .nav-body .recipeUse li img {
+  width: 54px;
+  aspect-ratio: 1;
+  margin: unset;
+}
+nav .nav-body .recipeUse li div {
+  flex: 1;
+}
+nav .nav-body .recipeUse li .r-step-title, nav .nav-body .recipeUse li .r-step-dscpt {
+  font: 400 11px/16px "Pretendard";
+  margin: unset;
+}
+nav .nav-body .recipeUse li.active {
+  background-color: #F1F1F5;
+}
+nav .nav-body .recipeUse li + li {
+  margin: unset;
+}
+
 section {
   min-height: calc(100vh - 108px);
   padding-block: 16px 10px;
@@ -712,7 +792,7 @@ footer {
   bottom: 0;
   background-color: #ffffff;
   box-shadow: 0 -10px 5px 0 rgba(0, 0, 0, 0.0588235294);
-  z-index: 100;
+  z-index: 10;
 }
 footer ul {
   display: flex;
@@ -1133,4 +1213,98 @@ footer .floating .btn {
 }
 .profile .list {
   margin-top: 32px;
+}
+
+.list-useByDate h2, .list-recipe, .list-food {
+  padding-inline: 16px;
+}
+
+.home [class^=list-] {
+  margin-top: 24px;
+}
+
+.foodList .tab-filter {
+  margin-top: 32px;
+  padding-inline: 16px;
+}
+.foodList .list-food {
+  margin-block: 16px 24px;
+}
+.foodListDetail .list-food {
+  margin-block: 24px;
+}
+
+.foodCalendar {
+  padding-inline: 20px;
+}
+.foodCalendar .tab {
+  margin-top: 8px;
+}
+.foodCalendar .list-foodBuyUseByDate {
+  padding-inline: 4px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(17, 17, 17, 0.4);
+  z-index: 100;
+  display: none;
+}
+.modal-content {
+  width: 310px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.modal-body {
+  min-height: 110px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 36px 16px 24px;
+}
+.modal-body p {
+  font: 400 14px/20px "Pretendard";
+  letter-spacing: -0.025em;
+  color: #111111;
+  text-align: center;
+}
+.modal-body ul {
+  margin-top: 10px;
+}
+.modal-body li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+}
+.modal-body li p {
+  font: 400 12px/18px "Pretendard";
+  letter-spacing: -0.025em;
+  color: #111111;
+  text-align: center;
+}
+.modal-body .review-star {
+  margin-top: 8px;
+}
+.modal-footer .btn-wrap {
+  display: flex;
+}
+.modal-footer .btn-wrap .btn {
+  flex: 1;
+  font: 600 14px/20px "Pretendard";
+  text-align: center;
+  border-radius: unset;
 }/*# sourceMappingURL=styles.css.map */

@@ -73,12 +73,14 @@ $mb-b2-rg: 400 14px/20px $font;
 $mb-b2-lt: 200 14px/20px $font;
 $mb-b3-rg: 400 13px/18px $font;
 $mb-b4-rg: 400 12px/18px $font;
+$mb-c1-sb: 600 13px/18px $font;
 $mb-c1-rg: 400 13px/18px $font;
 $mb-c2-sb: 600 12px/18px $font;
 $mb-c2-rg: 400 12px/18px $font;
 $mb-c3-rg: 400 11px/16px $font;
 
 $btn1-rg: 400 16px/24px $font;
+$btn2-sb: 600 14px/20px $font;
 $btn2-rg: 400 14px/20px $font;
 $btn4-rg: 400 12px/18px $font;
 
@@ -90,6 +92,7 @@ $bg-black: #111111;
 $bg-white: #ffffff;
 $bg-regular: #F1F1F5;
 $bg-red: #DC0000;
+$bg-dim: rgba($bg-black, 0.4);
 
 $brand: #33BA8A;
 
@@ -302,6 +305,9 @@ $brand: #33BA8A;
     }
 }
 .review-star{
+    display: flex;
+    align-items: center;
+    gap: 4px;
     ul{
         display: inline-flex;
     }
@@ -310,7 +316,7 @@ $brand: #33BA8A;
         display: inline-block;
         width: 1em;
         aspect-ratio: 1;
-        background: url(/resources/images/icons/ic-star.svg) 0/2em no-repeat;
+        background: url(/resources/images/icons/ic-star.svg) 0/3em no-repeat;
         &.active{
             background-position: -1em;
         }
@@ -320,6 +326,16 @@ $brand: #33BA8A;
         letter-spacing: 0.025em;
         color: $font-02black;
         vertical-align: bottom;
+    }
+    label{
+        font-size: 24px;
+        width: 1em;
+        aspect-ratio: 1;
+        object-fit: cover;
+        background: url(/resources/images/icons/ic-star.svg) -2em / 3em no-repeat;
+        &:has(input:checked) ~ label{
+            background-position: 0;
+        }
     }
 }
 .list{
@@ -497,7 +513,6 @@ $brand: #33BA8A;
 
     // 식자재 캘린더 내 식자재들
     &-foodBuyUseByDate{
-        padding-inline: 24px;
         h2{
             font: $mb-h4-rg;
             letter-spacing: -0.025em;
