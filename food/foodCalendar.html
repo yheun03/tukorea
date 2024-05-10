@@ -25,7 +25,7 @@
         name="식자재 관리의 새로운 방법을 만나다, 뉴밋."
         content="식자재 관리와 요리의 즐거움을 일깨워 주는 서비스인 뉴밋은 레시피 공유, 식자재 관리등을 개성있게 할 수 있는 서비스 입니다."
     >
-    <link rel="stylesheet" href="/resources/styles/jquery-ui.min.css">
+    <!-- <link rel="stylesheet" href="/resources/styles/jquery-ui.min.css"> -->
     <link rel="stylesheet" href="/resources/styles/slick.css">
     <link rel="stylesheet" href="/resources/styles/styles.css">
     <script src="/resources/scripts/jquery-2.2.4.min.js"></script>
@@ -50,11 +50,45 @@
                     </ul>
                 </div>
                 <div class="foodCalendarBuyUse"></div>
-                <script>
-                    $(".foodCalendarBuyUse").datepicker()
-                </script>
+                <div class="list-foodBuyUseByDate">
+                    <h2><span>17</span>일</h2>
+                    <ul>
+                        <li>
+                            <img src="/resources/images/food/temp.png" alt="">
+                            <div>
+                                <p><span class="f-name">삼겹살</span><span class="f-size">300g</span></p>
+                                <p><span class="f-addDate">24.01.05</span><span class="f-useByDate">24.08.12</span></p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="/resources/images/food/temp.png" alt="">
+                            <div>
+                                <p><span class="f-name">삼겹살</span><span class="f-size">300g</span></p>
+                                <p><span class="f-addDate">24.01.05</span><span class="f-useByDate">24.08.12</span></p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </section>
     </div>
+    <script>
+        var dateList = [
+            { date: "2024-05-11", type: "useByDate" },
+            { date: "2024-05-15", type: "useByDate" },
+            { date: "2024-05-11", type: "buyDate" },
+            { date: "2024-05-04", type: "buyDate" },
+            { date: "2024-05-10", type: "buyDate" }
+        ];
+        $(".foodCalendarBuyUse").datepicker({
+            language: "ko",
+            changeMonth: true,
+            changeYear: true,
+            dateFormat: "yy-mm-dd",
+            showMonthAfterYear: true, 
+            dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+            monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+        })
+    </script>
 </body>
 </html>

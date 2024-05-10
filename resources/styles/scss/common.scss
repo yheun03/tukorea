@@ -61,6 +61,7 @@ $font-disabled: #999999;
 $mb-d3-sb: 600 40px/52px $font;
 $mb-d4-sb: 600 36px/44px $font;
 $mb-h4-sb: 600 20px/28px $font;
+$mb-h4-rg: 400 20px/28px $font;
 $mb-h5-sb: 600 18px/26px $font;
 $mb-t1-sb: 600 24px/34px $font;
 $mb-t4-sb: 600 16px/24px $font;
@@ -386,7 +387,6 @@ $brand: #33BA8A;
             margin-top: 4px;
         }
     }
-
     // 레시피
     &-recipe{
         & > ul{
@@ -418,7 +418,6 @@ $brand: #33BA8A;
             border-radius: 8px;
         }
     }
-
     // 식자재 리스트
     &-food{
         & + &{
@@ -430,20 +429,6 @@ $brand: #33BA8A;
             grid-gap: 16px;
         }
         a{
-            span{
-                &,
-                &::before{
-                    font: $mb-c1-rg;
-                    letter-spacing: -0.025em;
-                    color: $font-02black;
-                }
-                &.f-size::before{
-                    content: " - ";
-                }
-                &.f-useByDate::before{
-                    content: " ~ ";
-                }
-            }
             div{
                 margin-top: 12px
             }
@@ -495,7 +480,6 @@ $brand: #33BA8A;
             }
         }
     }
-
     // 해시태그
     &-tag{
         ul{
@@ -508,6 +492,38 @@ $brand: #33BA8A;
             padding: 2px 4px;
             background-color: #F7F7FB;
             display: inline-block;
+        }
+    }
+
+    // 식자재 캘린더 내 식자재들
+    &-foodBuyUseByDate{
+        padding-inline: 24px;
+        h2{
+            font: $mb-h4-rg;
+            letter-spacing: -0.025em;
+            color: $font-02black;
+            align-items: baseline;
+            margin-top: 38px;
+            span{
+                font: $mb-d3-sb;
+            }
+        }
+        ul{
+            li{
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                margin-top: 12px;
+                p + p{
+                    margin-top: 4px;
+                }
+            }
+            img{
+                width: 70px;
+                aspect-ratio: 70/64;
+                object-fit: cover;
+                border-radius: 4px;
+            }
         }
     }
 }
@@ -576,4 +592,94 @@ $brand: #33BA8A;
         object-fit: cover;
         border-radius: 8px;
     }
+}
+// NOTE: 데이트피커 커스텀
+.ui-datepicker{
+    &-header{
+        display: flex;
+        align-items: center;
+        .ui{
+            &-corner-all{
+                text-indent: -9999px;
+                width: 48px;
+                aspect-ratio: 1;
+                background: url(/resources/images/icons/datepicker/ic-prev.svg) center/24px no-repeat;
+                &.ui-datepicker-next{
+                    background-image: url(/resources/images/icons/datepicker/ic-next.svg);
+                }
+            }
+            &-datepicker-title{
+                order: -1;
+                margin-right: auto;
+                select{
+                    font: $mb-b2-rg;
+                    letter-spacing: -0.025em;
+                    color: $font-02black;
+                    padding: 10px 8px;
+                    border: unset;
+                }
+            }
+        }
+    }
+    &-calendar{
+        width: 100%;
+        tr > *{
+            position: relative;
+            font: $mb-t4-rg;
+            letter-spacing: -0.025em;
+            color: $font-02black;
+            padding-block: 12px;
+            text-align: center;
+            color: $font-02black;
+            a{
+                color: inherit;
+            }
+        }
+        td{
+            &.ui-datepicker{
+                &-today,
+                &-current-day{
+                    &::before{
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 32px;
+                        aspect-ratio: 1;
+                        border-radius: 50%;
+                        border: 1px solid $brand;
+                        z-index: -1;
+                    }
+                }
+                &-today{
+                    color: $brand;
+                }
+                &-current-day{
+                    color: $font-01white !important;
+                    &::before{
+                        background-color: $brand;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.f-name,
+.f-size,
+.f-addDate,
+.f-useByDate{
+    &,
+    &::before{
+        font: $mb-c1-rg;
+        letter-spacing: -0.025em;
+        color: $font-02black;
+    }
+}
+.f-size::before{
+    content: " - ";
+}
+.f-useByDate::before{
+    content: " ~ ";
 }
