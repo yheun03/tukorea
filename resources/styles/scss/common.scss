@@ -512,6 +512,38 @@ $brand: #33BA8A;
     }
 }
 .tab{
+    ul{
+        display: flex;
+        gap: 26px;
+        li{
+            position: relative;
+            font: $mb-b2-rg;
+            letter-spacing: -0.025em;
+            color: $font-02black;
+            &.active{
+                font: $mb-b2-sb;
+            }
+            & + li{
+                &::before{
+                    content: "";
+                    width: 2px;
+                    aspect-ratio: 1;
+                    background-color: rgba($bg-black, 0.2);
+                    position: absolute;
+                    left: -12px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+                &[data-color]{
+                    background-color: red;
+                    color: attr(data-color)
+                }
+            }
+        }
+        a{
+            color: inherit;
+        }
+    }
     &-filter{
         table{
             width: 100%;
