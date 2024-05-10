@@ -57,227 +57,335 @@
         }
     }
 }
-
-.recipeUse{
-
-    & > ol{
-        padding-inline: 20px;
-        & > li{
-            counter-increment: recipe-step;
-            margin-bottom: 60px;
-            &::before{
-                content: counter(recipe-step)".";
-                font: $mb-h4-sb;
-                letter-spacing: -0.025em;
-                color: $font-02black;
-            }
-            & > img{
-                margin-top: 12px;
-                width: 100%;
-                aspect-ratio: 335/250;
-                object-fit: cover;
-            }
-        }
-        .r-step{
-            &-title{
-                font: $mb-h5-sb;
-                margin-top: 16px;
-            }
-            &-dscpt{
-                font: $mb-c1-rg;
-                margin-top: 4px;
-                color: $font-04grey;
-            }
-            &-timer{
-                margin-top: 4px;
-                padding-block: 20px;
-                p{
-                    font: $mb-d3-sb;
-                    font-weight: 800;
+.recipe{
+    // NOTE: 레시피 사용 썸네일과 사용 단계
+    &Use{
+        & > ol{
+            padding-inline: 20px;
+            & > li{
+                counter-increment: recipe-step;
+                margin-bottom: 60px;
+                &::before{
+                    content: counter(recipe-step)".";
+                    font: $mb-h4-sb;
                     letter-spacing: -0.025em;
-                    color: $brand;
-                    text-align: center;
-                    span + span::before{
-                        content: " : ";
+                    color: $font-02black;
+                }
+                & > img{
+                    margin-top: 12px;
+                    width: 100%;
+                    aspect-ratio: 335/250;
+                    object-fit: cover;
+                }
+            }
+            .r-step{
+                &-title{
+                    font: $mb-h5-sb;
+                    margin-top: 16px;
+                }
+                &-dscpt{
+                    font: $mb-c1-rg;
+                    margin-top: 4px;
+                    color: $font-04grey;
+                }
+                &-timer{
+                    margin-top: 4px;
+                    padding-block: 20px;
+                    p{
+                        font: $mb-d3-sb;
+                        font-weight: 800;
+                        letter-spacing: -0.025em;
+                        color: $brand;
+                        text-align: center;
+                        span + span::before{
+                            content: " : ";
+                        }
+                    }
+                    ul{
+                        display: flex;
+                        gap: 32px;
+                        justify-content: center;
+                        margin-top: 20px;
                     }
                 }
-                ul{
-                    display: flex;
-                    gap: 32px;
-                    justify-content: center;
-                    margin-top: 20px;
+            }
+        }
+
+        &Thumbnail{
+            .r{
+                &-thumbnail,
+                &-infor,
+                &-information{
+                    padding-inline: 20px;
+                }
+                &-thumbnail{
+                    position: relative;
+                    & > img{
+                        width: 100%;
+                        object-fit: cover;
+                        aspect-ratio: 335/250;
+                    }
+                    & > div{
+                        position: absolute;
+                        top: 0;
+                        left: 20px;
+                        right: 20px;
+                        height: 100%;
+                        background: linear-gradient(140deg, rgba($bg-black, 0) 60%, rgba($bg-black, 1));
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: flex-end;
+                        padding: 10px;
+                    }
+                    ul{
+                        display: flex;
+                        gap: 6px;
+                        img{
+                            width: 24px;
+                            aspect-ratio: 1;
+                        }
+                    }
+                }
+                &-infor{
+                    // NOTE: 레시피 관련 설명
+                    margin-top: 16px;
+                    ul{
+                        margin-top: 32px;
+                        display: flex;
+                        justify-content: center;
+                        gap: 32px;
+                        img{
+                            width: 28px;
+                            aspect-ratio: 1;
+                        }
+                        li{
+                            display: inline-flex;
+                            gap: 4px;
+                            align-items: center;
+                        }
+                        span{
+                            font: $mb-c2-rg;
+                            letter-spacing: -0.025em;
+                            color: $font-02black;
+                        }
+                    }
+                    .r{
+                        &-title{
+                            font: $mb-h4-sb;
+                            letter-spacing: -0.025em;
+                            color: $font-02black;
+                        }
+                        &-dscpt{
+                            margin-top: 4px;
+                            font: $mb-c1-rg;
+                            letter-spacing: -0.025em;
+                            color: $font-04grey;
+                        }
+                    }
+                    &-writer{
+                        margin-top: 28px;
+                        border: solid $line-light;
+                        border-block-width: 1px;
+                        padding: 20px;
+                        display: flex;
+                        align-items: flex-start;
+                        & > div{
+                            flex: 1;
+                            padding-inline: 16px;
+                        }
+                        .r{
+                            &-profile{
+                                width: 42px;
+                                aspect-ratio: 1;
+                                object-fit: cover;
+                                border-radius: 12px;
+                            }
+                            &-writer{
+                                font: $mb-b3-rg;
+                                letter-spacing: -0.025em;
+                                color: $font-02black;
+                                span{
+                                    font: $mb-b1-sb;
+                                }
+                                &-dscpt{
+                                    font: $mb-b4-rg;
+                                    letter-spacing: -0.025em;
+                                    color: $font-04grey;
+                                }
+                            }
+                        }
+                    }
+                }
+                &-information{
+                    table{
+                        width: 100%;
+                        border-collapse: collapse;
+                        & + table{
+                            margin-top: 8px;
+                            tbody{
+                                border: unset;
+                            }
+                        }
+                        thead{
+                            border-bottom: 1px solid $line-black;
+                            text-align: left;
+                            font: $mb-t5-sb;
+                            letter-spacing: -0.025em;
+                            color: $font-02black;
+                            th{
+                                padding-block: 16px 12px;
+                            }
+                        }
+                        tbody{
+                            font: $mb-b2-rg;
+                            letter-spacing: -0.025em;
+                            color: $font-02black;
+                            border-bottom: 1px solid $line-light;
+                            tr:first-child td{
+                                padding-top: 24px;
+                            }
+                            tr:last-child td{
+                                padding-bottom: 32px;
+                            }
+                            th{
+                                width: 100px;
+                                font-weight: 400;
+                                text-align: left;
+                            }
+                            td{
+                                text-align: center;
+                                padding: 8px;
+                                span{
+                                    &.lack{
+                                        color: $bg-red;
+                                    }
+                                    & + span{
+                                        font: $mb-b4-rg;
+                                        color: rgba($font-04grey, 0.5);
+                                        &::before{
+                                            content: "/";
+                                        }
+                                    }
+                                }
+                                .btn{
+                                    display: inline-block;
+                                    margin-left: auto;
+                                }
+                                &:has(.btn:only-child){
+                                    width: 0;
+                                    padding-inline: unset;
+                                    text-align: right;
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
     }
 
-    &Thumbnail{
-        .r{
-            &-thumbnail,
-            &-infor,
-            &-information{
-                padding-inline: 20px;
+    // NOTE: 레시피 등록
+    &Insert{
+        h2{
+            font: $mb-h4-sb;
+            letter-spacing: -0.025em;
+            color: $font-02black;
+        }
+        // NOTE: 레시피 자체에 대한 설명
+        &Thumbnail{
+            padding: 8px 20px 24px;
+            border-bottom: 10px solid $line-regular;
+            .imageUploader{
+                margin-top: 12px;
             }
-            &-thumbnail{
-                position: relative;
-                & > img{
-                    width: 100%;
-                    object-fit: cover;
-                    aspect-ratio: 335/250;
-                }
-                & > div{
-                    position: absolute;
-                    top: 0;
-                    left: 20px;
-                    right: 20px;
-                    height: 100%;
-                    background: linear-gradient(140deg, rgba($bg-black, 0) 60%, rgba($bg-black, 1));
-                    display: flex;
-                    justify-content: flex-end;
-                    align-items: flex-end;
-                    padding: 10px;
-                }
-                ul{
-                    display: flex;
-                    gap: 6px;
-                    img{
-                        width: 24px;
-                        aspect-ratio: 1;
-                    }
-                }
-            }
-            &-infor{
-                // NOTE: 레시피 관련 설명
+            .ipt{
                 margin-top: 16px;
-                ul{
-                    margin-top: 32px;
-                    display: flex;
-                    justify-content: center;
-                    gap: 32px;
-                    img{
-                        width: 28px;
-                        aspect-ratio: 1;
-                    }
-                    li{
-                        display: inline-flex;
-                        gap: 4px;
-                        align-items: center;
-                    }
-                    span{
-                        font: $mb-c2-rg;
-                        letter-spacing: -0.025em;
-                        color: $font-02black;
-                    }
-                }
-                .r{
-                    &-title{
-                        font: $mb-h4-sb;
-                        letter-spacing: -0.025em;
-                        color: $font-02black;
-                    }
-                    &-dscpt{
-                        margin-top: 4px;
-                        font: $mb-c1-rg;
-                        letter-spacing: -0.025em;
-                        color: $font-04grey;
-                    }
-                }
-                &-writer{
-                    margin-top: 28px;
-                    border: solid $line-light;
-                    border-block-width: 1px;
-                    padding: 20px;
-                    display: flex;
-                    align-items: flex-start;
-                    & > div{
-                        flex: 1;
-                        padding-inline: 16px;
-                    }
-                    .r{
-                        &-profile{
-                            width: 42px;
-                            aspect-ratio: 1;
-                            object-fit: cover;
-                            border-radius: 12px;
-                        }
-                        &-writer{
-                            font: $mb-b3-rg;
-                            letter-spacing: -0.025em;
-                            color: $font-02black;
-                            span{
-                                font: $mb-b1-sb;
-                            }
-                            &-dscpt{
-                                font: $mb-b4-rg;
-                                letter-spacing: -0.025em;
-                                color: $font-04grey;
-                            }
-                        }
-                    }
+                div{
+                    gap: 16px;
                 }
             }
-            &-information{
-                table{
-                    width: 100%;
-                    border-collapse: collapse;
-                    & + table{
-                        margin-top: 8px;
-                        tbody{
-                            border: unset;
-                        }
-                    }
-                    thead{
-                        border-bottom: 1px solid $line-black;
-                        text-align: left;
+        }
+
+        // NOTE: 레시피 단계별 설명
+        &Steps{
+            h2{
+                margin: 24px 16px 20px;
+            }
+            ol{
+                & > li{
+                    padding: 20px;
+                    counter-increment: steps;
+                    & > h3{
                         font: $mb-t5-sb;
                         letter-spacing: -0.025em;
                         color: $font-02black;
-                        th{
-                            padding-block: 16px 12px;
+                        &::before{
+                            content: counter(steps);
                         }
                     }
-                    tbody{
-                        font: $mb-b2-rg;
-                        letter-spacing: -0.025em;
-                        color: $font-02black;
-                        border-bottom: 1px solid $line-light;
-                        tr:first-child td{
-                            padding-top: 24px;
+                    .imageUploader{
+                        margin-top: 14px;
+                    }
+                    .ipt,
+                    .btn-wrap{
+                        margin-top: 16px;
+                    }
+                    
+                    input[size]{
+                        text-align: center;
+                    }
+                    input[type=checkbox]{
+                        display: none;
+                        &:checked + .ipt{
+                            display: block;
                         }
-                        tr:last-child td{
-                            padding-bottom: 32px;
+                    }
+                    .btn-wrap{
+                        display: flex;
+                        gap: 4px;
+                        & ~ .ipt{
+                            display: none;
                         }
-                        th{
-                            width: 100px;
-                            font-weight: 400;
-                            text-align: left;
-                        }
-                        td{
-                            text-align: center;
-                            padding: 8px;
-                            span{
-                                &.lack{
-                                    color: $bg-red;
-                                }
-                                & + span{
-                                    font: $mb-b4-rg;
-                                    color: rgba($font-04grey, 0.5);
-                                    &::before{
-                                        content: "/";
+                        .btn{
+                            border-color: $line-black;
+                            color: $font-02black;
+                            display: flex;
+                            align-items: center;
+                            padding: 7px 12px;
+                            &::before{
+                                content: "";
+                                position: relative;
+                                font-size: 16px;
+                                width: 1em;
+                                aspect-ratio: 1;
+                                margin-right: 2px;
+                                background: url(/resources/images/icons/recipe/ic-add.svg) 0/1em no-repeat;
+                            }
+                            &.active{
+                                background-color: $brand;
+                                border-color: $brand;
+                                color: $font-01white;
+                                &::before{
+                                    background: {
+                                        image: url(/resources/images/icons/ic-delete.svg);
+                                        size: 2em;
                                     }
                                 }
                             }
-                            .btn{
-                                display: inline-block;
-                                margin-left: auto;
-                            }
-                            &:has(.btn:only-child){
-                                width: 0;
-                                padding-inline: unset;
-                                text-align: right;
-                            }
                         }
                     }
+                }
+            }
+            h3{
+                font: $mb-t5-sb;
+                letter-spacing: -0.025em;
+                color: $font-02black;
+                display: flex;
+                align-items: center;
+                ul{
+                    margin-left: auto;
+                    display: flex;
+                    gap: 4px;
                 }
             }
         }

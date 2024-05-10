@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="/resources/scripts/jquery-2.2.4.min.js"></script>
-    <style>
+    <!-- <style>
         .rating {
   display: flex;
   flex-direction: row-reverse;
@@ -32,10 +32,10 @@
   background-color: gold;
 }
 
-    </style>
+    </style> -->
 </head>
 <body>
-    <div class="rating">
+    <!-- <div class="rating">
         <input type="radio" id="star5" name="rating" value="5" />
         <label for="star5"></label>
         <input type="radio" id="star4" name="rating" value="4" />
@@ -68,6 +68,64 @@
             reader.readAsDataURL(input.files[0]);
           }
         });
-      });</script>
+      });</script> -->
+      <style>
+        .ipt{
+          display: none;
+        }
+        input:checked + .ipt{
+          display: block;
+        }
+      </style>
+    <div class="btn-wrap">
+      <label for="te1">재료</label>
+      <label for="te2">도구</label>
+      <label for="te3">팁</label>
+      <label for="te4">타이머</label>
+    </div>
+    <input type="checkbox" id="te1">
+    <div class="ipt">
+        <span>재료</span>
+        <div>
+            <input type="text" maxlength="2" size="2">
+            <span>:</span>
+            <input type="text" maxlength="2" size="2">
+            <span>:</span>
+            <input type="text" maxlength="2" size="2">
+        </div>
+    </div>
+    <input type="checkbox" id="te2">
+    <div class="ipt">
+        <span>도구</span>
+        <div>
+            <input type="text" maxlength="2" size="2">
+            <span>:</span>
+            <input type="text" maxlength="2" size="2">
+            <span>:</span>
+            <input type="text" maxlength="2" size="2">
+        </div>
+    </div>
+    <input type="checkbox" id="te3">
+    <div class="ipt">
+        <span>팁</span>
+        <div>
+            <input type="text" maxlength="2" size="2">
+            <span>:</span>
+            <input type="text" maxlength="2" size="2">
+            <span>:</span>
+            <input type="text" maxlength="2" size="2">
+        </div>
+    </div>
+    <input type="checkbox" id="te4">
+    <div class="ipt">
+        <span>타이머</span>
+        <div>
+            <input type="text" maxlength="2" size="2">
+            <span>:</span>
+            <input type="text" maxlength="2" size="2">
+            <span>:</span>
+            <input type="text" maxlength="2" size="2">
+        </div>
+    </div>
 </body>
 </html>

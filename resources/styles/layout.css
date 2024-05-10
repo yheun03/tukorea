@@ -176,6 +176,10 @@ button {
   padding: 3px 8px;
   border-radius: 4px;
 }
+.btn.clear {
+  background-color: transparent;
+  border-color: transparent;
+}
 .btn.primary {
   background-color: #33BA8A;
   color: #ffffff;
@@ -192,12 +196,12 @@ button {
   border-color: #E5E5EC;
 }
 .btn.square {
-  border-radius: 8px;
   width: 50px;
   aspect-ratio: 1;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 10px;
 }
 .btn.square img {
   width: 20px;
@@ -206,6 +210,7 @@ button {
 }
 .btn.square.sm {
   width: 40px;
+  border-radius: 8px;
 }
 .btn.square.primary {
   background-color: #33BA8A;

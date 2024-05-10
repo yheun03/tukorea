@@ -104,7 +104,8 @@ $brand: #33BA8A;
         }
     }
     input,
-    select{
+    select,
+    textarea{
         flex: 1;
         display: inline-block;
         font: $mb-t4-rg;
@@ -113,6 +114,7 @@ $brand: #33BA8A;
         padding: 14px 16px;
         border: 1px solid $line-regular;
         border-radius: 6px;
+        resize: none;
         &::placeholder{
             color: $font-04grey;
         }
@@ -120,6 +122,9 @@ $brand: #33BA8A;
             outline: unset;
             background-color: rgba($brand, 0.2);
         }
+    }
+    textarea{
+        min-height: 154px;
     }
     & > div{
         margin-top: 8px;
