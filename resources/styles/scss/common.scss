@@ -59,10 +59,13 @@ $font-04grey: #767676;
 $font-disabled: #999999;
 
 $mb-d3-sb: 600 40px/52px $font;
+$mb-d4-sb: 600 36px/44px $font;
 $mb-h4-sb: 600 20px/28px $font;
 $mb-h5-sb: 600 18px/26px $font;
-$mb-t5-sb: 600 18px/26px $font;
+$mb-t1-sb: 600 24px/34px $font;
+$mb-t4-sb: 600 16px/24px $font;
 $mb-t4-rg: 400 16px/24px $font;
+$mb-t5-sb: 600 18px/26px $font;
 $mb-b1-sb: 600 15px/22px $font;
 $mb-b2-sb: 600 14px/20px $font;
 $mb-b2-rg: 400 14px/20px $font;
@@ -84,6 +87,7 @@ $line-regular: #E5E5EC;
 
 $bg-black: #111111;
 $bg-white: #ffffff;
+$bg-regular: #F1F1F5;
 $bg-red: #DC0000;
 
 $brand: #33BA8A;
@@ -126,11 +130,76 @@ $brand: #33BA8A;
     textarea{
         min-height: 154px;
     }
+
     & > div{
         margin-top: 8px;
         display: flex;
         align-items: center;
         gap: 6px;
+    }
+    label{
+        position: relative;
+        display: flex;
+        gap: 8px;
+        cursor: pointer;
+        input{
+            display: none;
+        }
+        // checkbox 기반
+        &::before{
+            content: "";
+            display: block;
+            font-size: 20px;
+            width: 1em;
+            aspect-ratio: 1;
+            background: $bg-white url(/resources/images/icons/ic-toggle.svg) 0/2em no-repeat;
+            border: 1px solid $line-regular;
+            transition: 0.2s;
+        }
+        &:has(input:checked)::before{
+            background-position: -1em;
+            background-color: $brand;
+            border-color: $brand;
+        }
+        // radio 형태 수정
+        &:has(input[type=radio])::before{
+            border-radius: 50%;
+        }
+        &:has(input.toggle){
+            padding-left: 36px;
+            &::before{
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                background: $bg-white;
+                border: unset;
+                box-shadow: 1px 1px 3px 0 rgba($bg-black, 0.1);
+                border-radius: 50%;
+            }
+            &::after{
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 36px;
+                height: 12px;
+                border-radius: 6px;
+                background-color: $bg-regular;
+                z-index: -1;
+            }
+            span{
+                padding-left: 8px;
+            }
+        }
+        &:has(input.toggle:checked){
+            &::before{
+                box-shadow: unset;
+                background-color: $brand;
+                left: 16px;
+            }
+        }
     }
 }
 
@@ -253,6 +322,28 @@ $brand: #33BA8A;
     }
 }
 .list{
+    border-top: 1px solid $line-light;
+    li{
+        border-bottom: 1px solid $line-light;
+        & > *{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 20px;
+        }
+        & > a{
+            padding-right: 20px;
+            background: url(/resources/images/icons/ic-arrow-right-b.svg) right 20px center/20px no-repeat;
+        }
+        .ipt > div{
+            margin: unset;
+        }
+    }
+    span{
+        font: $mb-t4-sb;
+        letter-spacing: -0.025em;
+        color: $font-02black;
+    }
     // 소비기한 임박 식자재
     &-useByDate{
         & > ul{

@@ -164,6 +164,66 @@ button {
   align-items: center;
   gap: 6px;
 }
+.ipt label {
+  position: relative;
+  display: flex;
+  gap: 8px;
+  cursor: pointer;
+}
+.ipt label input {
+  display: none;
+}
+.ipt label::before {
+  content: "";
+  display: block;
+  font-size: 20px;
+  width: 1em;
+  aspect-ratio: 1;
+  background: #ffffff url(/resources/images/icons/ic-toggle.svg) 0/2em no-repeat;
+  border: 1px solid #E5E5EC;
+  transition: 0.2s;
+}
+.ipt label:has(input:checked)::before {
+  background-position: -1em;
+  background-color: #33BA8A;
+  border-color: #33BA8A;
+}
+.ipt label:has(input[type=radio])::before {
+  border-radius: 50%;
+}
+.ipt label:has(input.toggle) {
+  padding-left: 36px;
+}
+.ipt label:has(input.toggle)::before {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #ffffff;
+  border: unset;
+  box-shadow: 1px 1px 3px 0 rgba(17, 17, 17, 0.1);
+  border-radius: 50%;
+}
+.ipt label:has(input.toggle)::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 12px;
+  border-radius: 6px;
+  background-color: #F1F1F5;
+  z-index: -1;
+}
+.ipt label:has(input.toggle) span {
+  padding-left: 8px;
+}
+.ipt label:has(input.toggle:checked)::before {
+  box-shadow: unset;
+  background-color: #33BA8A;
+  left: 16px;
+}
 
 .btn {
   display: block;
@@ -274,6 +334,30 @@ button {
   vertical-align: bottom;
 }
 
+.list {
+  border-top: 1px solid #F1F1F5;
+}
+.list li {
+  border-bottom: 1px solid #F1F1F5;
+}
+.list li > * {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+}
+.list li > a {
+  padding-right: 20px;
+  background: url(/resources/images/icons/ic-arrow-right-b.svg) right 20px center/20px no-repeat;
+}
+.list li .ipt > div {
+  margin: unset;
+}
+.list span {
+  font: 600 16px/24px "Pretendard";
+  letter-spacing: -0.025em;
+  color: #111111;
+}
 .list-useByDate > ul {
   width: 100%;
   overflow: auto;
@@ -483,6 +567,9 @@ header ul:only-child li:first-child + li {
 }
 header:has(ul:only-child) {
   padding-left: 10px;
+}
+header.effectUnset {
+  box-shadow: unset;
 }
 
 section {
@@ -885,4 +972,37 @@ footer .floating .btn {
   margin-left: auto;
   display: flex;
   gap: 4px;
+}
+
+.profile .user-name {
+  font: 600 24px/34px "Pretendard";
+  letter-spacing: -0.025em;
+  color: #111111;
+  text-align: center;
+  margin-top: 20px;
+}
+.profile .user-recipe {
+  display: flex;
+  padding-inline: 20px;
+  justify-content: space-between;
+  margin-top: 18px;
+}
+.profile .user-recipe li {
+  width: 100px;
+}
+.profile .user-recipe p {
+  font: 400 16px/24px "Pretendard";
+  letter-spacing: -0.025em;
+  color: #111111;
+  text-align: center;
+}
+.profile .user-recipe span {
+  display: block;
+  font: 600 36px/44px "Pretendard";
+  letter-spacing: -0.025em;
+  color: #111111;
+  text-align: center;
+}
+.profile .list {
+  margin-top: 32px;
 }/*# sourceMappingURL=styles.css.map */

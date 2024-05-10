@@ -51,6 +51,9 @@ header{
     &:has(ul:only-child){
         padding-left: 10px;
     }
+    &.effectUnset{
+        box-shadow: unset;
+    }
 }
 section{
     min-height: calc(100vh - ($height-header + $height-footer));

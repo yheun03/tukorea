@@ -391,3 +391,39 @@
         }
     }
 }
+.profile{
+    .user{
+        &-name{
+            font: $mb-t1-sb;
+            letter-spacing: -0.025em;
+            color: $font-02black;
+            text-align: center;
+            margin-top: 20px;
+        }
+        &-recipe{
+            display: flex;
+            padding-inline: 20px;
+            justify-content: space-between;
+            margin-top: 18px;
+            li{
+                width: 100px;
+            }
+            p{
+                font: $mb-t4-rg;
+                letter-spacing: -0.025em;
+                color: $font-02black;
+                text-align: center;
+            }
+            span{
+                display: block;
+                font: $mb-d4-sb;
+                letter-spacing: -0.025em;
+                color: $font-02black;
+                text-align: center;
+            }
+        }
+    }
+    .list{
+        margin-top: 32px;
+    }
+}
