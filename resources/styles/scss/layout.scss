@@ -102,6 +102,7 @@ nav{
                 gap: 8px;
                 align-items: center;
                 border-radius: 4px;
+                margin: unset;
                 img{
                     width: 54px;
                     aspect-ratio: 1;
@@ -117,13 +118,19 @@ nav{
                         margin: unset;
                     }
                     &-timer{
+                        padding-block: 4px 16px;
+                        p{
+                            font: $mb-d4-sb;
+                        }
+                        ul{
+                            gap: unset;
+                            justify-content: space-between;
+                            margin-top: unset;
+                        }
                     }
                 }
                 &.active{
                     background-color: $bg-regular;
-                }
-                & + li{
-                    margin: unset;
                 }
             }
         }

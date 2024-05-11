@@ -760,6 +760,7 @@ nav .nav-body .recipeUse li {
   gap: 8px;
   align-items: center;
   border-radius: 4px;
+  margin: unset;
 }
 nav .nav-body .recipeUse li img {
   width: 54px;
@@ -773,11 +774,19 @@ nav .nav-body .recipeUse li .r-step-title, nav .nav-body .recipeUse li .r-step-d
   font: 400 11px/16px "Pretendard";
   margin: unset;
 }
+nav .nav-body .recipeUse li .r-step-timer {
+  padding-block: 4px 16px;
+}
+nav .nav-body .recipeUse li .r-step-timer p {
+  font: 600 36px/44px "Pretendard";
+}
+nav .nav-body .recipeUse li .r-step-timer ul {
+  gap: unset;
+  justify-content: space-between;
+  margin-top: unset;
+}
 nav .nav-body .recipeUse li.active {
   background-color: #F1F1F5;
-}
-nav .nav-body .recipeUse li + li {
-  margin: unset;
 }
 
 section {
