@@ -398,7 +398,6 @@
             letter-spacing: -0.025em;
             color: $font-02black;
             text-align: center;
-            margin-top: 20px;
         }
         &-recipe{
             display: flex;
@@ -425,6 +424,31 @@
     }
     .list{
         margin-top: 32px;
+    }
+    .imageUploader{
+        padding-block: 32px 20px;
+        & > *{
+            position: relative;
+            width: 120px;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            p{
+                text-indent: -9999px;
+            }
+            .ic-camera{
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                font-size: 30px;
+                background-position: -1em;
+                border-radius: 50%;
+                background-color: $bg-regular;
+                &::after{
+                    font-size: 24px;
+                    background-position: -1em;
+                }
+            }
+        }
     }
 }
 

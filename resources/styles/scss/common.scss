@@ -601,11 +601,46 @@ $brand: #33BA8A;
     }
 }
 .imageUploader{
-    img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & > *{
+        display: block;
         width: 100%;
         aspect-ratio: 335/188;
         object-fit: cover;
         border-radius: 8px;
+    }
+    label{
+        background-color: #C1C6CF;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 4px;
+        p{
+            font: $mb-b4-rg;
+            letter-spacing: -0.025em;
+            color: $font-01white;
+        }
+        .ic-camera{
+            font-size: 36px;
+            width: 1em;
+            aspect-ratio: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &::after{
+                content: "";
+                display: block;
+                background: url(/resources/images/icons/ic-camera.svg) 0/2em no-repeat;
+                width: 1em;
+                aspect-ratio: 1;
+            }
+        }
+    }
+    img{
+        display: none;
     }
 }
 // NOTE: 데이트피커 커스텀

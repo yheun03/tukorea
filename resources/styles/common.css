@@ -577,11 +577,48 @@ button {
   color: #111111;
 }
 
-.imageUploader img {
+.imageUploader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imageUploader > * {
+  display: block;
   width: 100%;
   aspect-ratio: 335/188;
   object-fit: cover;
   border-radius: 8px;
+}
+.imageUploader label {
+  background-color: #C1C6CF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 4px;
+}
+.imageUploader label p {
+  font: 400 12px/18px "Pretendard";
+  letter-spacing: -0.025em;
+  color: #ffffff;
+}
+.imageUploader label .ic-camera {
+  font-size: 36px;
+  width: 1em;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.imageUploader label .ic-camera::after {
+  content: "";
+  display: block;
+  background: url(/resources/images/icons/ic-camera.svg) 0/2em no-repeat;
+  width: 1em;
+  aspect-ratio: 1;
+}
+.imageUploader img {
+  display: none;
 }
 
 .ui-datepicker-header {

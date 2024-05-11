@@ -63,6 +63,7 @@ nav{
     left: 0;
     background-color: $bg-dim;
     z-index: 100;
+    display: none;
     .nav{
         &-content{
             width: 260px;
@@ -71,9 +72,11 @@ nav{
             right: 0;
             overflow: hidden;
             background-color: $bg-white;
+            display: flex;
+            flex-direction: column;
         }
         &-header{
-            padding: 20px 16px 0;
+            padding: 20px 16px 16px;
             h2{
                 display: flex;
                 align-items: center;
@@ -94,7 +97,8 @@ nav{
             }
         }
         &-body{
-            padding-block: 16px;
+            padding-bottom: 16px;
+            overflow-y: auto;
             .recipeUse li{
                 display: flex;
                 flex-wrap: wrap;
