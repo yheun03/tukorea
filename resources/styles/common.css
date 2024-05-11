@@ -257,6 +257,12 @@ button {
   color: #111111;
   border-color: #33BA8A;
 }
+.btn.login {
+  width: 327px;
+}
+.btn.login img {
+  width: 100%;
+}
 .btn.white {
   background-color: #ffffff;
   color: #111111;

@@ -257,6 +257,12 @@ button {
   color: #111111;
   border-color: #33BA8A;
 }
+.btn.login {
+  width: 327px;
+}
+.btn.login img {
+  width: 100%;
+}
 .btn.white {
   background-color: #ffffff;
   color: #111111;
@@ -1381,4 +1387,26 @@ footer .floating .btn {
   font: 600 14px/20px "Pretendard";
   text-align: center;
   border-radius: unset;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 32px;
+  height: 100vh;
+}
+section:has(.login) {
+  padding: unset;
+}
+.login > img {
+  width: 260px;
+  aspect-ratio: 1;
+  object-fit: cover;
+  margin-top: 124px;
+}
+.login .btn {
+  padding: unset;
+  margin-top: 16px;
 }/*# sourceMappingURL=styles.css.map */

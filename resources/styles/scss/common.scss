@@ -244,6 +244,13 @@ $brand: #33BA8A;
         }
     }
 
+    &.login{
+        width: 327px;
+        img{
+            width: 100%;
+        }
+    }
+
     &.white{
         background-color: $bg-white;
         color: $font-02black;
