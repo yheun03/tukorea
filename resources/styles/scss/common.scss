@@ -131,6 +131,11 @@ $brand: #33BA8A;
             background-color: rgba($brand, 0.2);
         }
     }
+    select{
+        option{
+            background-color: $bg-white;
+        }
+    }
     textarea{
         min-height: 154px;
     }
@@ -429,6 +434,7 @@ $brand: #33BA8A;
                     color: $font-03grey;
                     letter-spacing: -0.025em;
                     margin-top: 2px;
+                    word-break: break-word;
                 }
             }
             & > div{
@@ -439,6 +445,7 @@ $brand: #33BA8A;
             width: 100%;
             object-fit: cover;
             border-radius: 8px;
+            box-shadow: 0 8px 12px -1px rgb(35 48 59 / 10%);
         }
     }
     // 식자재 리스트
@@ -462,6 +469,7 @@ $brand: #33BA8A;
             aspect-ratio: 1.8;
             object-fit: cover;
             border-radius: 4px;
+            box-shadow: 0 8px 12px -1px rgb(35 48 59 / 10%);
         }
 
         &.detail{
@@ -601,6 +609,7 @@ $brand: #33BA8A;
                 &.active{
                     font: $mb-b2-sb;
                     border-color: $line-black;
+                    box-shadow: inset 0 0 0 1px $line-black;
                     color: $font-02black;
                 }
             }
@@ -648,6 +657,7 @@ $brand: #33BA8A;
     }
     img{
         display: none;
+        box-shadow: 1px 1px 3px 0 rgba($bg-black, 0.1);
     }
 }
 // NOTE: 데이트피커 커스텀
@@ -717,6 +727,45 @@ $brand: #33BA8A;
                     &::before{
                         background-color: $brand;
                     }
+                }
+            }
+            &.useByDate{
+                a::before{
+                    content: "";
+                    position: absolute;
+                    width: 3px;
+                    aspect-ratio: 1;
+                    border-radius: 50%;
+                    background-color: #39C3B6;
+                    bottom: 1.5px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+                &.buyDate{
+                    a{
+                        &::before{
+                            left: 19px;
+                            transform: unset;
+                        }
+                        &::after{
+                            left: unset;
+                            right: 19px;
+                            transform: unset;
+                        }
+                    }
+                }
+            }
+            &.buyDate{
+                a::after{
+                    content: "";
+                    position: absolute;
+                    width: 3px;
+                    aspect-ratio: 1;
+                    border-radius: 50%;
+                    background-color: #6100FF;
+                    bottom: 1.5px;
+                    left: 50%;
+                    transform: translateX(-50%);
                 }
             }
         }
