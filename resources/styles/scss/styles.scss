@@ -499,7 +499,7 @@
     left: 0;
     background-color: $bg-dim;
     z-index: 100;
-    display: none;
+    // display: none;
     &-content{
         width: 310px;
         position: absolute;
@@ -531,9 +531,12 @@
         li{
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
             gap: 8px;
             margin-top: 4px;
+            img{
+                margin-top: 2px;
+            }
             p{
                 font: $mb-b4-rg;
                 letter-spacing: -0.025em;
