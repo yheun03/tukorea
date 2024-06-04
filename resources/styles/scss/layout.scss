@@ -34,6 +34,20 @@ header{
         li{
             display: inline-block;
             margin-left: 16px;
+            &.active{
+                position: relative;
+                &::after{
+                    content: "";
+                    position: absolute;
+                    top: 4px;
+                    right: 4px;
+                    width: 7px;
+                    aspect-ratio: 1;
+                    border-radius: 50%;
+                    background-color: $bg-red;
+                    border: 1px solid $font-01white;
+                }
+            }
         }
         img{
             height: 28px;
