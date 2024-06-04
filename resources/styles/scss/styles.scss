@@ -582,3 +582,51 @@
         margin-top: 16px;
     }
 }
+
+.notice{
+    section:has(&){
+        padding-top: unset;
+    }
+    li{
+        position: relative;
+        padding: 18px 24px 18px 46px;
+        color: $font-04grey;
+        &::before{
+            content: "";
+            position: absolute;
+            width: 14px;
+            aspect-ratio: 1;
+            background-color: white;
+            top: 20px;
+            left: 24px;
+            opacity: 0.5;
+        }
+        &.new{
+            // 읽지않은 알람
+            background-color: #EFFBF6;
+            color: $font-02black;
+            &::before{
+                opacity: 0.95;
+            }
+        }
+        &.food::before{
+            background: url(/resources/images/icons/modal/ic-food.svg) center/14px no-repeat;
+        }
+    }
+    p{
+        display: flex;
+        justify-content: space-between;
+        font: $mb-t4-rg;
+        color: inherit;
+        & + p{
+            margin-top: 5px;
+        }
+    }
+    a{
+        color: inherit;
+    }
+    span{
+        font: $mb-c2-rg;
+        color: inherit;
+    }
+}
