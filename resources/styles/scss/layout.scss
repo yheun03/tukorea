@@ -196,7 +196,7 @@ footer{
     }
     .floating{
         position: absolute;
-        bottom: $height-footer + 10px;
+        bottom: calc(100% + 10px);
         right: 16px;
         .btn{
             box-shadow: 0 4px 16px 0 rgba($bg-black, 0.08);
