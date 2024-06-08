@@ -405,7 +405,7 @@ $brand: #33BA8A;
         img{
             width: 48px;
             aspect-ratio: 1;
-            object-fit: contain;
+            object-fit: cover;
         }
         p{
             font: $mb-c2-rg;

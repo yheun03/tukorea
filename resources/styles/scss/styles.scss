@@ -140,9 +140,22 @@
                     ul{
                         display: flex;
                         gap: 6px;
-                        img{
+                        li{
                             width: 24px;
-                            aspect-ratio: 1;
+                            a,img{
+                                display: block;
+                                height: inherit;
+                                aspect-ratio: 1;
+                            }
+                            &.bookmark{
+                                a{
+                                    font-size: 24px;
+                                    background: url(/resources/images/icons/ic-bookmark.svg) 0 / 2em no-repeat;
+                                }
+                                &.active a{
+                                    background-position-x: -1em;
+                                }
+                            }
                         }
                     }
                 }
@@ -401,8 +414,8 @@
         }
         &-recipe{
             display: flex;
-            padding-inline: 20px;
-            justify-content: space-between;
+            justify-content: center;
+            gap: 20px;
             margin-top: 18px;
             li{
                 width: 100px;
