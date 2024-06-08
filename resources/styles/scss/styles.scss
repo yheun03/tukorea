@@ -597,6 +597,17 @@
 }
 
 .notice{
+    &:not(:has(ul)){
+        &::after{
+            content: "알람이 없습니다.";
+            font: $mb-t4-sb;
+            color: $font-04grey;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
     section:has(&){
         padding-top: unset;
     }
