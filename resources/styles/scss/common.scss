@@ -443,6 +443,7 @@ $brand: #33BA8A;
         }
         img{
             width: 100%;
+            aspect-ratio: 1.2/1;
             object-fit: cover;
             border-radius: 8px;
             box-shadow: 0 8px 12px -1px rgb(35 48 59 / 10%);
